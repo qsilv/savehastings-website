@@ -157,11 +157,11 @@ export default function ClientLayout({
                         Events
                       </Link>
                     </li> */}
-                    <li>
+                    {/* <li>
                       <Link href="/contact" className="text-muted-foreground hover:text-foreground">
                         Contact
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
                 {/* TEMP DIV */}

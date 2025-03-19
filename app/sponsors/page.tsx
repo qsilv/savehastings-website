@@ -5,65 +5,66 @@ import { ArrowLeft, ExternalLink, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
+export const sponsors = [
+  {
+    id: 1,
+    name: "Islamic Relief Canada",
+    logo: "/partners/islamicrelief.webp",
+    description: "Supporting humanitarian aid and development projects to help those in need.",
+    website: "https://islamicreliefcanada.org/",
+  },
+  {
+    id: 2,
+    name: "IDRF (International Development and Relief Foundation)",
+    logo: "/partners/idrf.webp",
+    description: "Providing effective humanitarian aid and sustainable development programs.",
+    website: "https://idrf.org/",
+  },
+  {
+    id: 3,
+    name: "House",
+    logo: "/partners/house.jpg",
+    description: "Supporting community initiatives and local development projects.",
+    website: "https://example.com/",
+  },
+  {
+    id: 4,
+    name: "Paragon",
+    logo: "/partners/paragon.webp",
+    description: "Committed to making a positive impact in the Vancouver community.",
+    website: "https://example.com/",
+  },
+  {
+    id: 5,
+    name: "Sabzi",
+    logo: "/partners/sabzi.png",
+    description: "Providing fresh food and supporting food security initiatives.",
+    website: "https://example.com/",
+  },
+  {
+    id: 6,
+    name: "Chicken World",
+    logo: "/partners/chickenworld.webp",
+    description: "Supporting nutrition programs and food distribution efforts.",
+    website: "https://example.com/",
+  },
+  {
+    id: 7,
+    name: "Global News",
+    logo: "/partners/globalnews.png",
+    description: "Raising awareness about homelessness and community support initiatives.",
+    website: "https://example.com/",
+  },
+  {
+    id: 8,
+    name: "Save On Foods",
+    logo: "/partners/saveonfoods.png",
+    description: "Providing food resources and supporting community food programs.",
+    website: "https://example.com/",
+  }
+]
 export default function SponsorsPage() {
-  const sponsors = [
-    {
-      id: 1,
-      name: "Community Foundation",
-      logo: "/placeholder.svg?height=100&width=200&text=Community Foundation",
-      description: "Supporting local initiatives that create positive change in Vancouver's communities.",
-      website: "https://example.com",
-    },
-    {
-      id: 2,
-      name: "Pacific Health Services",
-      logo: "/placeholder.svg?height=100&width=200&text=Pacific Health",
-      description: "Providing healthcare services and resources to underserved populations.",
-      website: "https://example.com",
-    },
-    {
-      id: 3,
-      name: "Urban Housing Initiative",
-      logo: "/placeholder.svg?height=100&width=200&text=Urban Housing",
-      description: "Working to create affordable housing solutions for all Vancouver residents.",
-      website: "https://example.com",
-    },
-    {
-      id: 4,
-      name: "West Coast Credit Union",
-      logo: "/placeholder.svg?height=100&width=200&text=West Coast CU",
-      description: "Investing in community development and financial education programs.",
-      website: "https://example.com",
-    },
-    {
-      id: 5,
-      name: "Coastal Grocery Co-op",
-      logo: "/placeholder.svg?height=100&width=200&text=Coastal Grocery",
-      description: "Providing fresh, affordable food and supporting food security initiatives.",
-      website: "https://example.com",
-    },
-    {
-      id: 6,
-      name: "Metro Transit Authority",
-      logo: "/placeholder.svg?height=100&width=200&text=Metro Transit",
-      description: "Helping ensure transportation access for all community members.",
-      website: "https://example.com",
-    },
-    {
-      id: 7,
-      name: "Pacific Northwest University",
-      logo: "/placeholder.svg?height=100&width=200&text=PNW University",
-      description: "Engaging students in community service and research to address homelessness.",
-      website: "https://example.com",
-    },
-    {
-      id: 8,
-      name: "Evergreen Technology",
-      logo: "/placeholder.svg?height=100&width=200&text=Evergreen Tech",
-      description: "Providing technology solutions and digital literacy programs for underserved communities.",
-      website: "https://example.com",
-    },
-  ]
+
 
   return (
     <div className="container px-4 py-12 md:px-6 md:py-24">

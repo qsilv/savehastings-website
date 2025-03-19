@@ -16,8 +16,6 @@ export const metadata = {
     "charity"
   ],
   author: "SAVEHASTINGS Team",
-  viewport: "width=device-width, initial-scale=1",
-  robots: "index, follow"
 }
 
 export default function RootLayout({

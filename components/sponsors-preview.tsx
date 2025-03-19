@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
-
+import { sponsors } from "@/app/sponsors/page"
 import { Button } from "@/components/ui/button"
 
 export default function SponsorsPreview() {
@@ -18,11 +18,11 @@ export default function SponsorsPreview() {
         </div>
         <div className="mx-auto grid max-w-5xl items-center gap-6 py-12">
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-            {[1, 2, 3, 4, 5, 6, 8].map((i) => (
-              <div key={i} className="flex items-center justify-center p-4 bg-background rounded-lg">
+            {sponsors.slice(0, 7).map((sponsor) => (
+              <div key={sponsor.id} className="flex items-center justify-center p-4 bg-background rounded-lg">
                 <Image
-                  src={`/placeholder.svg?height=80&width=160&text=Sponsor ${i}`}
-                  alt={`Sponsor ${i}`}
+                  src={sponsor.logo}
+                  alt={sponsor.name}
                   width={160}
                   height={80}
                   className="h-12 w-auto object-contain"
@@ -48,4 +48,3 @@ export default function SponsorsPreview() {
     </section>
   )
 }
-
