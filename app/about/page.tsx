@@ -67,6 +67,13 @@ export default function AboutPage() {
       bio: "Robert is a local business owner committed to giving back to the community through ethical business practices and philanthropy.",
       image: "/placeholder.svg?height=300&width=300&text=Robert B.",
     },
+    {
+      id: 5,
+      name: "Robert Blackwood",
+      role: "Board Member",
+      bio: "Robert is a local business owner committed to giving back to the community through ethical business practices and philanthropy.",
+      image: "/placeholder.svg?height=300&width=300&text=Robert B.",
+    },
   ]
 
   const milestones = [
@@ -211,7 +218,7 @@ export default function AboutPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <Card>
               <CardHeader className="pb-2">
-                <div className="text-4xl font-bold text-primary">5,000+</div>
+                <div className="text-4xl font-bold text-primary">1,000+</div>
                 <CardTitle>Meals Served Monthly</CardTitle>
               </CardHeader>
               <CardContent>
@@ -223,7 +230,7 @@ export default function AboutPage() {
             </Card>
             <Card>
               <CardHeader className="pb-2">
-                <div className="text-4xl font-bold text-primary">300+</div>
+                <div className="text-4xl font-bold text-primary">200+</div>
                 <CardTitle>Active Volunteers</CardTitle>
               </CardHeader>
               <CardContent>
@@ -234,7 +241,7 @@ export default function AboutPage() {
             </Card>
             <Card>
               <CardHeader className="pb-2">
-                <div className="text-4xl font-bold text-primary">1,200+</div>
+                <div className="text-4xl font-bold text-primary">8000+</div>
                 <CardTitle>People Supported</CardTitle>
               </CardHeader>
               <CardContent>
@@ -245,7 +252,7 @@ export default function AboutPage() {
             </Card>
             <Card>
               <CardHeader className="pb-2">
-                <div className="text-4xl font-bold text-primary">25+</div>
+                <div className="text-4xl font-bold text-primary">7+</div>
                 <CardTitle>Community Partners</CardTitle>
               </CardHeader>
               <CardContent>
