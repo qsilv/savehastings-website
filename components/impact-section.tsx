@@ -21,23 +21,23 @@ export default function ImpactSection() {
             alt="Volunteers distributing meals"
             className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
           />
-          <div className="flex flex-col justify-center space-y-4">
+            <div className="flex flex-col justify-center space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col items-center justify-center space-y-2 rounded-lg border bg-background p-4">
-                <div className="text-3xl font-bold text-primary">5,000+</div>
-                <div className="text-sm font-medium text-muted-foreground">Meals Served</div>
+              <div className="text-3xl font-bold text-primary">1,000+</div>
+              <div className="text-sm font-medium text-muted-foreground">Meals Served Monthly</div>
               </div>
               <div className="flex flex-col items-center justify-center space-y-2 rounded-lg border bg-background p-4">
-                <div className="text-3xl font-bold text-primary">1,200+</div>
-                <div className="text-sm font-medium text-muted-foreground">Volunteer Hours</div>
+              <div className="text-3xl font-bold text-primary">200+</div>
+              <div className="text-sm font-medium text-muted-foreground">Active Volunteers</div>
               </div>
               <div className="flex flex-col items-center justify-center space-y-2 rounded-lg border bg-background p-4">
-                <div className="text-3xl font-bold text-primary">300+</div>
-                <div className="text-sm font-medium text-muted-foreground">Care Packages</div>
+              <div className="text-3xl font-bold text-primary">8000+</div>
+              <div className="text-sm font-medium text-muted-foreground">People Supported</div>
               </div>
               <div className="flex flex-col items-center justify-center space-y-2 rounded-lg border bg-background p-4">
-                <div className="text-3xl font-bold text-primary">25+</div>
-                <div className="text-sm font-medium text-muted-foreground">Community Events</div>
+              <div className="text-3xl font-bold text-primary">7+</div>
+              <div className="text-sm font-medium text-muted-foreground">Community Partners</div>
               </div>
             </div>
             <p className="text-muted-foreground">
