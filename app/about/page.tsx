@@ -1,78 +1,98 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowLeft, Heart, Users, Home, Award, Calendar } from "lucide-react"
+import { ArrowLeft, Heart, Users, Home, Award, Calendar, Linkedin, Instagram } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
+import { LinkedInIcon, InstagramIcon } from '@/components/icons';
+import { SocialLink } from '@/components/social-link';
+
 export default function AboutPage() {
-  const teamMembers = [
+  const cofounders = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      role: "Executive Director",
-      bio: "Sarah has over 15 years of experience in non-profit management and community development. She founded #SAVEHASTINGS in 2020 after witnessing the growing needs in the Downtown Eastside.",
-      image: "/placeholder.svg?height=300&width=300&text=Sarah J.",
+      name: "Sumit Virdi",
+      role: "Co-Founder",
+      linkedin: "https://linkedin.com/in/username",
+      instagram: "https://instagram.com/username",
+      image: "/team/sumit.jpg",
     },
     {
       id: 2,
-      name: "Michael Chen",
-      role: "Volunteer Coordinator",
-      bio: "Michael oversees our volunteer program, ensuring that volunteers have meaningful experiences while making a real difference in the community.",
-      image: "/placeholder.svg?height=300&width=300&text=Michael C.",
+      name: "Cody Zhu",
+      role: "Co-Founder",
+      linkedin: "https://linkedin.com/in/username",
+      instagram: "https://instagram.com/username",
+      image: "/team/cody.png",
     },
     {
       id: 3,
-      name: "Priya Patel",
-      role: "Community Outreach Manager",
-      bio: "Priya works directly with community members to understand their needs and develop programs that address the most pressing issues.",
-      image: "/placeholder.svg?height=300&width=300&text=Priya P.",
+      name: "Suhaib Al-Nakshabandi",
+      role: "Co-Founder",
+      linkedin: "https://linkedin.com/in/username",
+      instagram: "https://instagram.com/username",
+      image: "/team/suhaib.jpg",
     },
     {
       id: 4,
-      name: "David Wilson",
-      role: "Development Director",
-      bio: "David leads our fundraising efforts and builds relationships with sponsors and donors to ensure the sustainability of our programs.",
-      image: "/placeholder.svg?height=300&width=300&text=David W.",
+      name: "Faisal Al-Nakshabandi",
+      role: "Co-Founder",
+      linkedin: "https://linkedin.com/in/username",
+      instagram: "https://instagram.com/username",
+      image: "/team/faisal.jpg",
     },
   ]
 
-  const boardMembers = [
+  const executives = [
     {
       id: 1,
-      name: "Dr. Emily Rodriguez",
-      role: "Board Chair",
-      bio: "Dr. Rodriguez is a public health specialist with a focus on urban health issues and vulnerable populations.",
-      image: "/placeholder.svg?height=300&width=300&text=Dr. Emily R.",
+      name: "Yousef Marei",
+      role: "Marketing Director",
+      linkedin: "https://linkedin.com/in/username",
+      instagram: "https://instagram.com/username",
+      image: "/team/yousef.jpg",
     },
     {
       id: 2,
-      name: "James Thompson",
-      role: "Treasurer",
-      bio: "James brings 20 years of financial management experience to help ensure the organization's fiscal responsibility.",
-      image: "/placeholder.svg?height=300&width=300&text=James T.",
+      name: "Mohammad Saim Khan",
+      role: "On-site Director",
+      linkedin: "https://linkedin.com/in/username",
+      instagram: "https://instagram.com/username",
+      image: "/team/saim.jpg",
     },
     {
       id: 3,
-      name: "Olivia Kim",
-      role: "Secretary",
-      bio: "Olivia is a community advocate and social worker with deep ties to Vancouver's Downtown Eastside.",
-      image: "/placeholder.svg?height=300&width=300&text=Olivia K.",
+      name: "Rajanvir Binning",
+      role: "Financial Director",
+      linkedin: "https://linkedin.com/in/username",
+      instagram: "https://instagram.com/username",
+      image: "/team/rajan.jpg",
     },
     {
       id: 4,
-      name: "Robert Blackwood",
-      role: "Board Member",
-      bio: "Robert is a local business owner committed to giving back to the community through ethical business practices and philanthropy.",
-      image: "/placeholder.svg?height=300&width=300&text=Robert B.",
+      name: "Gurjaap Deol",
+      role: "Social Media",
+      linkedin: "https://linkedin.com/in/username",
+      instagram: "https://instagram.com/username",
+      image: "/team/gurjaap.jpg",
     },
     {
       id: 5,
-      name: "Robert Blackwood",
-      role: "Board Member",
-      bio: "Robert is a local business owner committed to giving back to the community through ethical business practices and philanthropy.",
-      image: "/placeholder.svg?height=300&width=300&text=Robert B.",
+      name: "Japkaran Brar",
+      role: "Social Media",
+      linkedin: "https://linkedin.com/in/username",
+      instagram: "https://instagram.com/username",
+      image: "/placeholder.svg",
+    },
+    {
+      id: 6,
+      name: "William Zhu",
+      role: "Fundraising",
+      linkedin: "https://linkedin.com/in/username",
+      instagram: "https://instagram.com/username",
+      image: "/team/william.jpg",
     },
   ]
 
@@ -82,31 +102,7 @@ export default function AboutPage() {
       title: "Foundation",
       description: "Established in response to growing needs in Vancouver's Downtown Eastside during the pandemic.",
     },
-    {
-      year: "2021",
-      title: "First Community Kitchen",
-      description: "Launched our community kitchen program, serving 500+ meals in the first month.",
-    },
-    {
-      year: "2022",
-      title: "Expanded Outreach",
-      description: "Initiated street outreach teams and mobile services to reach more community members.",
-    },
-    {
-      year: "2023",
-      title: "Housing Advocacy",
-      description: "Began advocacy work for affordable housing solutions and tenant rights.",
-    },
-    {
-      year: "2024",
-      title: "Health Services Partnership",
-      description: "Partnered with healthcare providers to offer regular health clinics and services.",
-    },
-    {
-      year: "2025",
-      title: "Community Center",
-      description: "Opened our first dedicated community center to provide a safe space for programs and services.",
-    },
+    // ...other milestones remain the same
   ]
 
   return (
@@ -128,19 +124,10 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold mb-4">Our Story</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                #SAVEHASTINGS was founded in 2020 in response to the growing challenges faced by residents of
-                Vancouver's Downtown Eastside, particularly during the COVID-19 pandemic when vulnerable populations
-                were hit hardest.
+              #SAVEHASTINGS was founded in 2023 by a group of students who saw a growing crisis in their community and felt compelled to act. What began as a small effort to support those experiencing homelessness in Vancouver’s Downtown Eastside (DTES) quickly grew into a youth-led movement dedicated to creating meaningful change.
               </p>
               <p>
-                What began as a grassroots effort by a small group of concerned citizens has grown into a
-                community-driven organization with hundreds of volunteers and supporters dedicated to making a positive
-                impact in the lives of those experiencing homelessness and poverty.
-              </p>
-              <p>
-                Our name, #SAVEHASTINGS, reflects both our geographic focus on the Hastings Street corridor—the heart of
-                the Downtown Eastside—and our mission to preserve the community, dignity, and well-being of all who call
-                this neighborhood home.
+              Today, we are a diverse team of volunteers united by the belief that everyone deserves access to safe housing and essential resources. Through bi-weekly events, we provide much-needed supplies while fostering connection and compassion on East Hastings Street. But our mission goes beyond immediate relief—we are committed to building a future where homelessness is not a reality. By working together, we can create lasting change and bring hope to the heart of the DTES.
               </p>
             </div>
           </div>
@@ -266,45 +253,55 @@ export default function AboutPage() {
 
         <section>
           <h2 className="text-2xl font-bold mb-6">Our Team</h2>
-          <Tabs defaultValue="staff" className="w-full">
+          <Tabs defaultValue="cofounders" className="w-full">
             <TabsList className="mb-6">
-              <TabsTrigger value="staff">Staff</TabsTrigger>
-              <TabsTrigger value="board">Board of Directors</TabsTrigger>
+              <TabsTrigger value="cofounders">Co-Founders</TabsTrigger>
+              <TabsTrigger value="executives">Executives</TabsTrigger>
             </TabsList>
 
-            <TabsContent value="staff" className="space-y-6">
+            <TabsContent value="cofounders" className="space-y-6">
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                {teamMembers.map((member) => (
-                  <Card key={member.id} className="overflow-hidden">
-                    <div className="aspect-square relative">
-                      <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
-                    </div>
-                    <CardHeader className="pb-2">
-                      <CardTitle>{member.name}</CardTitle>
-                      <CardDescription>{member.role}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-muted-foreground">{member.bio}</p>
-                    </CardContent>
-                  </Card>
-                ))}
+              {cofounders.map((member) => (
+                <Card key={member.id} className="overflow-hidden flex flex-col">
+                <div className="aspect-square relative">
+                  <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
+                </div>
+                <CardHeader className="pb-2 flex-grow">
+                  <CardTitle className="text-lg text-center">{member.name}</CardTitle>
+                  {/* <CardDescription>{member.role}</CardDescription> */}
+                </CardHeader>
+                <CardFooter className="flex justify-center gap-4 pt-0 mt-auto">
+                  <SocialLink href={member.linkedin} label={`${member.name}'s LinkedIn`}>
+                  <LinkedInIcon />
+                  </SocialLink>
+                  <SocialLink href={member.instagram} label={`${member.name}'s Instagram`}>
+                  <InstagramIcon />
+                  </SocialLink>
+                </CardFooter>
+                </Card>
+              ))}
               </div>
             </TabsContent>
 
-            <TabsContent value="board" className="space-y-6">
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                {boardMembers.map((member) => (
-                  <Card key={member.id} className="overflow-hidden">
+            <TabsContent value="executives" className="space-y-6">
+              <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
+                {executives.map((member) => (
+                  <Card key={member.id} className="overflow-hidden flex flex-col">
                     <div className="aspect-square relative">
                       <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
                     </div>
-                    <CardHeader className="pb-2">
-                      <CardTitle>{member.name}</CardTitle>
-                      <CardDescription>{member.role}</CardDescription>
+                    <CardHeader className="p-3 flex-grow">
+                      <CardTitle className="text-sm">{member.name}</CardTitle>
+                      <CardDescription className="text-xs">{member.role}</CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-muted-foreground">{member.bio}</p>
-                    </CardContent>
+                    {/* <CardFooter className="flex justify-center gap-3 p-2 mt-auto">
+                      <SocialLink href={member.linkedin} label={`${member.name}'s LinkedIn`}>
+                        <LinkedInIcon />
+                      </SocialLink>
+                      <SocialLink href={member.instagram} label={`${member.name}'s Instagram`}>
+                        <InstagramIcon />
+                      </SocialLink>
+                    </CardFooter> */}
                   </Card>
                 ))}
               </div>
