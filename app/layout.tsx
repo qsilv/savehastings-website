@@ -5,7 +5,19 @@ export const metadata = {
   title: "#SAVEHASTINGS - Supporting Vancouver's Downtown Eastside",
   description:
     "Join our community of volunteers dedicated to making a meaningful impact in the lives of those experiencing homelessness.",
-    generator: 'v0.dev'
+  keywords: [
+    "SAVEHASTINGS",
+    "Vancouver",
+    "Downtown Eastside",
+    "homelessness",
+    "volunteers",
+    "community support",
+    "non-profit",
+    "charity"
+  ],
+  author: "SAVEHASTINGS Team",
+  viewport: "width=device-width, initial-scale=1",
+  robots: "index, follow"
 }
 
 export default function RootLayout({

@@ -1,19 +1,21 @@
 "use client"
 
 import type React from "react"
-import { Inter } from "next/font/google"
+// import { Inter } from "next/font/google"
 import Link from "next/link"
 import { Mountain } from "lucide-react"
 import { useEffect } from "react"
-import localFont from 'next/font/local'
+import { goodDogFont } from "@/components/ui/fonts"
+import { inter } from "@/components/ui/fonts"
+
 
 
 import MobileNav from "@/components/mobile-nav"
 import "./globals.css"
 
 // Load Inter font with Latin subset
-const inter = Inter({ subsets: ["latin"] })
-const goodDogFont = localFont({ src: 'GoodDog.woff2' })
+// const inter = Inter({ subsets: ["latin"] })
+// const goodDogFont = localFont({ src: 'GoodDog.woff2' })
 
 
 /**
@@ -44,13 +46,13 @@ export default function ClientLayout({
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
           {/* Header with navigation */}
-          <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-16 items-center">
               {/* Logo and brand */}
-                <Link href="/" className="flex items-center gap-2 mr-6">
-                <img src="/SaveHastings.png" alt="#SAVEHASTINGS" className="h-7 w-6" />
-                <span className={`hidden font-bold sm:inline-block ${goodDogFont.className}`}>#SAVEHASTINGS</span>
-                </Link>
+              <Link href="/" className="flex items-center gap-2 mr-6">
+              <img src="/SaveHastings.png" alt="#SAVEHASTINGS" className="h-7 w-6" />
+              <span className={`hidden font-bold text-xl sm:inline-block ${goodDogFont.className}`}>#SAVEHASTINGS</span>
+              </Link>
 
               {/* Desktop navigation - hidden on mobile */}
               <nav className="hidden md:flex gap-6">
@@ -93,7 +95,7 @@ export default function ClientLayout({
               <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
                 {/* Organization information */}
                 <div>
-                  <h3 className="text-lg font-semibold mb-4">#SAVEHASTINGS</h3>
+                    <h3 className={`text-lg font-semibold mb-4 ${goodDogFont.className}`}>#SAVEHASTINGS</h3>
                   <p className="text-sm text-muted-foreground mb-4">
                     Supporting the homeless population in Vancouver's Downtown Eastside through community-driven
                     initiatives.
@@ -162,9 +164,10 @@ export default function ClientLayout({
                     </li>
                   </ul>
                 </div>
-
+                {/* TEMP DIV */}
+                  <div></div>
                 {/* Resources links */}
-                <div>
+                {/* <div>
                   <h3 className="text-lg font-semibold mb-4">Resources</h3>
                   <ul className="space-y-2 text-sm">
                     <li>
@@ -193,25 +196,25 @@ export default function ClientLayout({
                       </Link>
                     </li>
                   </ul>
-                </div>
+                </div> */}
 
                 {/* Contact information */}
                 <div>
                   <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                   <address className="not-italic text-sm text-muted-foreground space-y-2">
-                    <p>123 Main Street</p>
-                    <p>Vancouver, BC V6B 2W9</p>
+                    <p>399 Carral St</p>
+                    <p>Vancouver, BC V6B 2J4</p>
                     <p>Canada</p>
                     <p className="pt-2">
                       <a href="mailto:hashtagsavehastings@gmail.com" className="hover:text-foreground">
                         hashtagsavehastings@gmail.com
                       </a>
                     </p>
-                    <p>
+                    {/* <p>
                       <a href="tel:+16045551234" className="hover:text-foreground">
                         (604) 555-1234
                       </a>
-                    </p>
+                    </p> */}
                   </address>
                 </div>
               </div>

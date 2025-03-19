@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
+import { goodDogFont } from "./ui/fonts"
 
 import { Button } from "@/components/ui/button"
 
@@ -22,7 +23,7 @@ export default function HeroSection() {
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                <span className="text-primary">#SAVEHASTINGS</span>
+                <span className={`text-primary ${goodDogFont.className} text-enhanced`}>#SAVEHASTINGS</span>
               </h1>
               <p className="text-2xl font-semibold">Supporting Vancouver's Downtown Eastside</p>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">

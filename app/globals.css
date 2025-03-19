@@ -80,3 +80,29 @@ html {
   }
 }
 
+@layer utilities {
+  .text-enhanced {
+    /* Modern soft shadow for depth without harsh outline */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Slightly increased contrast */
+    font-weight: 500;
+  }
+  
+  /* Alternative with subtle background */
+  .text-elevated {
+    position: relative;
+    display: inline;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding: 0.1em 0.3em;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 0.2em;
+  }
+  
+  /* Contrast enhancer */
+  .text-crisp {
+    letter-spacing: 0.01em;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+  }
+}
