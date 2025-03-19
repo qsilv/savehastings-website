@@ -95,7 +95,10 @@ export default function ClientLayout({
               <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
                 {/* Organization information */}
                 <div>
-                    <h3 className={`text-lg font-semibold mb-4 ${goodDogFont.className}`}>#SAVEHASTINGS</h3>
+                  <h3 className="flex items-center gap-2 text-lg font-semibold mb-4">
+                    <img src="/SaveHastingsBlack.png" alt="#SAVEHASTINGS" className="h-5 w-4" />
+                    <span className={goodDogFont.className}>#SAVEHASTINGS</span>
+                  </h3>
                   <p className="text-sm text-muted-foreground mb-4">
                     Supporting the homeless population in Vancouver's Downtown Eastside through community-driven
                     initiatives.
