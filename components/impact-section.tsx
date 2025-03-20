@@ -15,7 +15,7 @@ export default function ImpactSection() {
         </div>
         <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2">
           <Image
-            src="/placeholder.svg?height=400&width=600"
+            src="/impact.png?height=400&width=600"
             width={600}
             height={400}
             alt="Volunteers distributing meals"
@@ -24,7 +24,7 @@ export default function ImpactSection() {
             <div className="flex flex-col justify-center space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col items-center justify-center space-y-2 rounded-lg border bg-background p-4">
-              <div className="text-3xl font-bold text-primary">1,000+</div>
+              <div className="text-3xl font-bold text-primary">750+</div>
               <div className="text-sm font-medium text-muted-foreground">Meals Served Monthly</div>
               </div>
               <div className="flex flex-col items-center justify-center space-y-2 rounded-lg border bg-background p-4">

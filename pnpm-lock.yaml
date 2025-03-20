@@ -107,6 +107,9 @@ importers:
       date-fns:
         specifier: 4.1.0
         version: 4.1.0
+      embla-carousel-autoplay:
+        specifier: ^8.5.2
+        version: 8.5.2(embla-carousel@8.5.1)
       embla-carousel-react:
         specifier: 8.5.1
         version: 8.5.1(react@19.0.0)
@@ -1247,6 +1250,11 @@ packages:
 
   electron-to-chromium@1.5.120:
     resolution: {integrity: sha512-oTUp3gfX1gZI+xfD2djr2rzQdHCwHzPQrrK0CD7WpTdF0nPdQ/INcRVjWgLdCT4a9W3jFObR9DAfsuyFQnI8CQ==}
+
+  embla-carousel-autoplay@8.5.2:
+    resolution: {integrity: sha512-27emJ0px3q/c0kCHCjwRrEbYcyYUPfGO3g5IBWF1i7714TTzE6L9P81V6PHLoSMAKJ1aHoT2e7YFOsuFKCbyag==}
+    peerDependencies:
+      embla-carousel: 8.5.2
 
   embla-carousel-react@8.5.1:
     resolution: {integrity: sha512-z9Y0K84BJvhChXgqn2CFYbfEi6AwEr+FFVVKm/MqbTQ2zIzO1VQri6w67LcfpVF0AjbhwVMywDZqY4alYkjW5w==}
@@ -2897,6 +2905,10 @@ snapshots:
   eastasianwidth@0.2.0: {}
 
   electron-to-chromium@1.5.120: {}
+
+  embla-carousel-autoplay@8.5.2(embla-carousel@8.5.1):
+    dependencies:
+      embla-carousel: 8.5.1
 
   embla-carousel-react@8.5.1(react@19.0.0):
     dependencies:

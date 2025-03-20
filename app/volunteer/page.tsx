@@ -57,7 +57,7 @@ export default function VolunteerPage() {
             </ul>
             <div className="mt-6">
               <Image
-                src="/placeholder.svg?height=300&width=500&text=Make an Impact"
+                src="/volunteer1.jpeg?height=300&width=500&text=Make an Impact"
                 width={500}
                 height={300}
                 alt="Volunteers making an impact"

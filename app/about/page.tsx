@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { LinkedInIcon, InstagramIcon } from '@/components/icons';
 import { SocialLink } from '@/components/social-link';
+import { goodDogFont } from "@/components/ui/fonts"
 
 export default function AboutPage() {
   const cofounders = [
@@ -112,7 +113,9 @@ export default function AboutPage() {
           <ArrowLeft className="h-4 w-4" />
           <span>Back to Home</span>
         </Link>
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">About #SAVEHASTINGS</h1>
+        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
+          About <span className={goodDogFont.className}>#SAVEHASTINGS</span>
+        </h1>
         <p className="max-w-[700px] text-muted-foreground md:text-xl">
           Learn about our mission, our team, and the impact we're making in Vancouver's Downtown Eastside.
         </p>
@@ -132,7 +135,7 @@ export default function AboutPage() {
             </div>
           </div>
           <Image
-            src="/placeholder.svg?height=400&width=500&text=Our Story"
+            src="/tempabout1.jpeg?height=400&width=500&text=Our Story"
             width={500}
             height={400}
             alt="Volunteers working in the community"
@@ -205,7 +208,7 @@ export default function AboutPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <Card>
               <CardHeader className="pb-2">
-                <div className="text-4xl font-bold text-primary">1,000+</div>
+                <div className="text-4xl font-bold text-primary">750+</div>
                 <CardTitle>Meals Served Monthly</CardTitle>
               </CardHeader>
               <CardContent>
@@ -359,7 +362,7 @@ export default function AboutPage() {
             </div>
             <div className="hidden md:block">
               <Image
-                src="/placeholder.svg?height=400&width=600&text=Join Our Mission"
+                src="/about2.jpeg?height=400&width=600&text=Join Our Mission"
                 width={600}
                 height={400}
                 alt="Join our mission"

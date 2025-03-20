@@ -22,45 +22,45 @@ export const sponsors = [
   },
   {
     id: 3,
-    name: "House",
+    name: "House of Chicken",
     logo: "/partners/house.jpg",
-    description: "Supporting community initiatives and local development projects.",
-    website: "https://example.com/",
+    description: "Specializes in flavorful chicken dishes, including original chicken biryani, chicken karahi, chicken burgers, spicy wings, and wraps.",
+    website: "https://www.facebook.com/HouseOfChickenCanada/",
   },
   {
     id: 4,
-    name: "Paragon",
+    name: "Paragon Roofing",
     logo: "/partners/paragon.webp",
-    description: "Committed to making a positive impact in the Vancouver community.",
-    website: "https://example.com/",
+    description: "Roofing in BC, offering a large selection of roof repair, inspection, removal, reroof and roofing install services.",
+    website: "https://www.paragonroofingbc.ca/",
   },
   {
     id: 5,
     name: "Sabzi",
     logo: "/partners/sabzi.png",
-    description: "Providing fresh food and supporting food security initiatives.",
-    website: "https://example.com/",
+    description: "Family-owned and operated premier grocery store chain in Canada.",
+    website: "https://sabzimandicanada.com/",
   },
   {
     id: 6,
     name: "Chicken World",
     logo: "/partners/chickenworld.webp",
-    description: "Supporting nutrition programs and food distribution efforts.",
-    website: "https://example.com/",
+    description: "Specialty fried chicken and burgers chain.",
+    website: "https://www.chickenworldcanada.com/",
   },
   {
     id: 7,
     name: "Global News",
     logo: "/partners/globalnews.png",
-    description: "Raising awareness about homelessness and community support initiatives.",
-    website: "https://example.com/",
+    description: "News and current affairs division of the Canadian Global Television Network.",
+    website: "https://globalnews.ca/",
   },
   {
     id: 8,
     name: "Save On Foods",
     logo: "/partners/saveonfoods.png",
-    description: "Providing food resources and supporting community food programs.",
-    website: "https://example.com/",
+    description: "Carrying more than 2,500 locally-made products from more than 2,000 local growers and producers.",
+    website: "https://www.saveonfoods.com/",
   }
 ]
 export default function SponsorsPage() {
@@ -143,13 +143,15 @@ export default function SponsorsPage() {
                 <span>Demonstrate your organization's commitment to social responsibility</span>
               </li>
             </ul>
-            <Button className="gap-1">
-              Contact Us <Mail className="h-4 w-4" />
+            <Button asChild className="gap-1">
+              <a href="mailto:hashtagsavehastings@gmail.com">
+                Contact Us <Mail className="h-4 w-4" />
+              </a>
             </Button>
           </div>
           <div className="bg-background rounded-lg p-6 flex items-center justify-center">
             <Image
-              src="/placeholder.svg?height=300&width=500&text=Partner With Us"
+              src="/sponsor1.jpeg?height=300&width=500&text=Partner With Us"
               width={500}
               height={300}
               alt="Partner with #SAVEHASTINGS"
