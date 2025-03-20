@@ -253,12 +253,13 @@ export default function VolunteerForm() {
 
           {/* Skills and Experience */}
           <div className="space-y-2">
-            <Label htmlFor="skills">Skills & Experience</Label>
+            <Label htmlFor="skills">Skills & Experience *</Label>
             <Textarea
               id="skills"
               name="entry.1353334588"
               placeholder="Please share any relevant skills, experience, or certifications you have."
               className="min-h-[100px]"
+              required
             />
           </div>
 
