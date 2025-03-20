@@ -109,7 +109,7 @@ export default function SponsorsPage() {
         ))}
       </div>
 
-      <div className="bg-muted rounded-lg p-6 md:p-10">
+      <div id="become-sponsor" className="bg-muted rounded-lg p-6 md:p-10">
         <div className="grid gap-6 md:grid-cols-2 items-center">
           <div>
             <h2 className="text-2xl font-bold mb-4">Become a Sponsor</h2>

@@ -30,7 +30,7 @@ export default function SponsorsPreview() {
               </div>
             ))}
             <div className="flex items-center justify-center p-4 bg-primary/5 rounded-lg border border-dashed border-primary/20">
-              <Link href="/sponsors" className="flex flex-col items-center justify-center gap-1 text-primary">
+              <Link href="/sponsors#become-sponsor" className="flex flex-col items-center justify-center gap-1 text-primary">
                 <span className="text-sm font-medium">Become a Sponsor</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>

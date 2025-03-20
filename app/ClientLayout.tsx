@@ -107,13 +107,13 @@ export default function ClientLayout({
                   </p>
                   {/* Social media links */}
                   <div className="flex space-x-4">
-                    <SocialLink href="#" label="Facebook">
+                    {/* <SocialLink href="" label="Facebook">
                       <FacebookIcon />
-                    </SocialLink>
-                    <SocialLink href="#" label="LinkedIn">
+                    </SocialLink> */}
+                    <SocialLink href="https://www.linkedin.com/in/save-hastings-209a46279/" label="LinkedIn">
                       <LinkedInIcon />
                     </SocialLink>
-                    <SocialLink href="#" label="Instagram">
+                    <SocialLink href="https://www.instagram.com/savehastings" label="Instagram">
                       <InstagramIcon />
                     </SocialLink>
                   </div>

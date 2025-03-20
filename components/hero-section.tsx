@@ -30,7 +30,7 @@ export default function HeroSection() {
     Autoplay({ 
       delay: 3000, 
       stopOnInteraction: true,
-      // stopOnMouseEnter: true 
+      stopOnMouseEnter: true 
     })
   )
 

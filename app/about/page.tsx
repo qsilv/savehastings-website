@@ -16,61 +16,61 @@ export default function AboutPage() {
       id: 1,
       name: "Sumit Virdi",
       role: "Co-Founder",
-      linkedin: "https://linkedin.com/in/username",
-      instagram: "https://instagram.com/username",
+      linkedin: "https://www.linkedin.com/in/sumit-s-virdi-a0342720a/",
+      instagram: "https://www.instagram.com/s_virdi66",
       image: "/team/sumit.jpg",
     },
     {
       id: 2,
       name: "Cody Zhu",
       role: "Co-Founder",
-      linkedin: "https://linkedin.com/in/username",
-      instagram: "https://instagram.com/username",
+      linkedin: "https://www.linkedin.com/in/cody-zhu-2193aa217/",
+      instagram: "https://www.instagram.com/_z.cody",
       image: "/team/cody.png",
     },
     {
       id: 3,
       name: "Suhaib Al-Nakshabandi",
       role: "Co-Founder",
-      linkedin: "https://linkedin.com/in/username",
-      instagram: "https://instagram.com/username",
+      linkedin: "https://www.linkedin.com/in/suhaib-al-nakshabandi-7274b21b9/",
+      instagram: "https://www.instagram.com/suhaib.nak",
       image: "/team/suhaib.jpg",
     },
     {
       id: 4,
       name: "Faisal Al-Nakshabandi",
       role: "Co-Founder",
-      linkedin: "https://linkedin.com/in/username",
-      instagram: "https://instagram.com/username",
+      linkedin: "https://www.instagram.com/fasooliah",
+      instagram: "https://www.instagram.com/fasooliah",
       image: "/team/faisal.jpg",
     },
   ]
 
   const executives = [
-    {
-      id: 1,
-      name: "Yousef Marei",
-      role: "Marketing Director",
-      linkedin: "https://linkedin.com/in/username",
-      instagram: "https://instagram.com/username",
-      image: "/team/yousef.jpg",
-    },
-    {
-      id: 2,
-      name: "Mohammad Saim Khan",
-      role: "On-site Director",
-      linkedin: "https://linkedin.com/in/username",
-      instagram: "https://instagram.com/username",
-      image: "/team/saim.jpg",
-    },
-    {
-      id: 3,
-      name: "Rajanvir Binning",
-      role: "Financial Director",
-      linkedin: "https://linkedin.com/in/username",
-      instagram: "https://instagram.com/username",
-      image: "/team/rajan.jpg",
-    },
+    // {
+    //   id: 1,
+    //   name: "Yousef Marei",
+    //   role: "Marketing Director",
+    //   linkedin: "https://linkedin.com/in/username",
+    //   instagram: "https://instagram.com/username",
+    //   image: "/team/yousef.jpg",
+    // },
+    // {
+    //   id: 2,
+    //   name: "Mohammad Saim Khan",
+    //   role: "On-site Director",
+    //   linkedin: "https://linkedin.com/in/username",
+    //   instagram: "https://instagram.com/username",
+    //   image: "/team/saim.jpg",
+    // },
+    // {
+    //   id: 3,
+    //   name: "Rajanvir Binning",
+    //   role: "Financial Director",
+    //   linkedin: "https://linkedin.com/in/username",
+    //   instagram: "https://instagram.com/username",
+    //   image: "/team/rajan.jpg",
+    // },
     {
       id: 4,
       name: "Gurjaap Deol",
@@ -79,14 +79,14 @@ export default function AboutPage() {
       instagram: "https://instagram.com/username",
       image: "/team/gurjaap.jpg",
     },
-    {
-      id: 5,
-      name: "Japkaran Brar",
-      role: "Social Media",
-      linkedin: "https://linkedin.com/in/username",
-      instagram: "https://instagram.com/username",
-      image: "/placeholder.svg",
-    },
+    // {
+    //   id: 5,
+    //   name: "Japkaran Brar",
+    //   role: "Social Media",
+    //   linkedin: "https://linkedin.com/in/username",
+    //   instagram: "https://instagram.com/username",
+    //   image: "/placeholder.svg",
+    // },
     {
       id: 6,
       name: "William Zhu",
@@ -94,6 +94,14 @@ export default function AboutPage() {
       linkedin: "https://linkedin.com/in/username",
       instagram: "https://instagram.com/username",
       image: "/team/william.jpg",
+    },
+    {
+      id: 7,
+      name: "Monir Fathalla",
+      role: "Web Development",
+      linkedin: "https://linkedin.com/in/username",
+      instagram: "https://instagram.com/username",
+      image: "/team/monir.jpg",
     },
   ]
 
@@ -355,7 +363,7 @@ export default function AboutPage() {
           <Link href="/volunteer">
             <Button>Volunteer Now</Button>
           </Link>
-          <Link href="/sponsors">
+          <Link href="/sponsors#become-sponsor">
             <Button variant="outline">Become a Sponsor</Button>
           </Link>
               </div>
