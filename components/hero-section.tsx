@@ -37,7 +37,7 @@ export default function HeroSection() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-primary-foreground">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 xl:grid-cols-[0.8fr_1.2fr]">
           {/* Text content column */}
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
@@ -67,7 +67,7 @@ export default function HeroSection() {
           </div>
 
           {/* Hero carousel with auto-slide and loop */}
-          <div className="mx-auto w-full max-w-[800px] lg:order-last">
+          <div className="mx-auto w-full max-w-[500px] lg:max-w-[600px] xl:max-w-[770px] relative lg:order-last">
             <Carousel 
               className="w-full" 
               opts={{
@@ -114,8 +114,8 @@ export default function HeroSection() {
                   />
                 </CarouselItem>
               </CarouselContent>
-              <CarouselPrevious className="lg:-left-12 left-2" />
-              <CarouselNext className="lg:-right-12 right-2" />
+              <CarouselPrevious className="lg:-left-10 left-2 z-10" />
+              <CarouselNext className="lg:-right-10 right-2 z-10" />
             </Carousel>
           </div>
         </div>

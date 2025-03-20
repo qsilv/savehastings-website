@@ -317,62 +317,61 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl font-bold mb-4">Join Our Mission</h2>
               <p className="mb-6 text-muted-foreground">
-                There are many ways to get involved with #SAVEHASTINGS and make a difference in the lives of those
-                experiencing homelessness in Vancouver's Downtown Eastside.
+          There are many ways to get involved with #SAVEHASTINGS and make a difference in the lives of those
+          experiencing homelessness in Vancouver's Downtown Eastside.
               </p>
               <div className="space-y-4">
-                <div className="flex gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20">
-                    <Users className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Volunteer</h3>
-                    <p className="text-sm text-muted-foreground">Join our team of dedicated volunteers.</p>
-                  </div>
-                </div>
-                <div className="flex gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20">
-                    <Award className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Become a Sponsor</h3>
-                    <p className="text-sm text-muted-foreground">Support our work through corporate sponsorship.</p>
-                  </div>
-                </div>
-                <div className="flex gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20">
-                    <Calendar className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Attend an Event</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Participate in our community events and fundraisers.
-                    </p>
-                  </div>
-                </div>
+          <div className="flex gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20">
+              <Users className="h-5 w-5 text-primary" />
+            </div>
+            <div>
+              <h3 className="font-medium">Volunteer</h3>
+              <p className="text-sm text-muted-foreground">Join our team of dedicated volunteers.</p>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20">
+              <Award className="h-5 w-5 text-primary" />
+            </div>
+            <div>
+              <h3 className="font-medium">Become a Sponsor</h3>
+              <p className="text-sm text-muted-foreground">Support our work through corporate sponsorship.</p>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20">
+              <Calendar className="h-5 w-5 text-primary" />
+            </div>
+            <div>
+              <h3 className="font-medium">Attend an Event</h3>
+              <p className="text-sm text-muted-foreground">
+                Participate in our community events and fundraisers.
+              </p>
+            </div>
+          </div>
               </div>
               <div className="mt-6 flex flex-wrap gap-4">
-                <Link href="/volunteer">
-                  <Button>Volunteer Now</Button>
-                </Link>
-                <Link href="/sponsors">
-                  <Button variant="outline">Become a Sponsor</Button>
-                </Link>
+          <Link href="/volunteer">
+            <Button>Volunteer Now</Button>
+          </Link>
+          <Link href="/sponsors">
+            <Button variant="outline">Become a Sponsor</Button>
+          </Link>
               </div>
             </div>
             <div className="hidden md:block">
               <Image
-                src="/about2.jpeg?height=400&width=600&text=Join Our Mission"
-                width={600}
-                height={400}
-                alt="Join our mission"
-                className="rounded-lg object-cover"
+          src="/about2.jpeg?height=280&width=420&text=Join Our Mission"
+          width={420}
+          height={280}
+          alt="Join our mission"
+          className="rounded-lg object-cover"
               />
             </div>
           </div>
         </section>
-      </div>
-    </div>
-  )
-}
-
+            </div>
+          </div>
+        )
+      }
