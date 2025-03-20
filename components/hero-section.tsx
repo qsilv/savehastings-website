@@ -83,6 +83,7 @@ export default function HeroSection() {
                     width={800}
                     height={550}
                     alt="Volunteers helping at a community event"
+                    priority
                     className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
                   />
                 </CarouselItem>
