@@ -5,7 +5,10 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
+
+import { goodDogFont } from "@/components/ui/fonts"
+
 
 /**
  * MobileNav Component
@@ -42,11 +45,12 @@ export default function MobileNav() {
 
       {/* Slide-in navigation panel */}
       <SheetContent side="left" className="z-50 w-[300px] sm:w-[400px]">
+      <SheetTitle className="sr-only">Mobile Navigation</SheetTitle>
         <div className="flex flex-col gap-6 py-6">
           {/* Header with logo and close button */}
           <div className="flex items-center justify-between mb-4">
             <Link href="/" className="flex items-center gap-2 font-bold text-xl" onClick={handleLinkClick}>
-              #SAVEHASTINGS
+              <span className={goodDogFont.className}>#SAVEHASTINGS</span>
             </Link>
             <Button variant="ghost" size="icon" onClick={() => setOpen(false)}>
               <X className="h-6 w-6" />
