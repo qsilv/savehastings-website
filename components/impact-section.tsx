@@ -25,7 +25,7 @@ export default function ImpactSection() {
             <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col items-center justify-center space-y-2 rounded-lg border bg-background p-4">
               <div className="text-3xl font-bold text-primary">750+</div>
-              <div className="text-sm font-medium text-muted-foreground">Meals Served Monthly</div>
+              <div className="text-sm font-medium text-muted-foreground">Meals Monthly</div>
               </div>
               <div className="flex flex-col items-center justify-center space-y-2 rounded-lg border bg-background p-4">
               <div className="text-3xl font-bold text-primary">200+</div>
