@@ -10,101 +10,92 @@ import { LinkedInIcon, InstagramIcon } from '@/components/icons';
 import { SocialLink } from '@/components/social-link';
 import { goodDogFont } from "@/components/ui/fonts"
 
+export const cofounders = [
+  {
+    id: 1,
+    name: "Sumit Virdi",
+    role: "Co-Founder",
+    linkedin: "https://www.linkedin.com/in/sumit-s-virdi-a0342720a/",
+    instagram: "https://www.instagram.com/s_virdi66",
+    image: "/team/sumit.jpg",
+  },
+  {
+    id: 2,
+    name: "Cody Zhu",
+    role: "Co-Founder",
+    linkedin: "https://www.linkedin.com/in/cody-zhu-2193aa217/",
+    instagram: "https://www.instagram.com/_z.cody",
+    image: "/team/cody.png",
+  },
+  {
+    id: 3,
+    name: "Suhaib Al-Nakshabandi",
+    role: "Co-Founder",
+    linkedin: "https://www.linkedin.com/in/suhaib-al-nakshabandi-7274b21b9/",
+    instagram: "https://www.instagram.com/suhaib.nak",
+    image: "/team/suhaib.jpg",
+  },
+  {
+    id: 4,
+    name: "Faisal Al-Nakshabandi",
+    role: "Co-Founder",
+    linkedin: "https://www.instagram.com/fasooliah",
+    instagram: "https://www.instagram.com/fasooliah",
+    image: "/team/faisal.jpg",
+  },
+];
+
+export const executives = [
+  {
+    id: 4,
+    name: "Gurjaap Deol",
+    role: "Social Media",
+    linkedin: "https://linkedin.com/in/username",
+    instagram: "https://instagram.com/username",
+    image: "/team/gurjaap.jpg",
+  },
+  {
+    id: 6,
+    name: "William Zhu",
+    role: "Fundraising",
+    linkedin: "https://linkedin.com/in/username",
+    instagram: "https://instagram.com/username",
+    image: "/team/william.jpg",
+  },
+  {
+    id: 7,
+    name: "Monir Fathalla",
+    role: "Web Development",
+    linkedin: "https://linkedin.com/in/username",
+    instagram: "https://instagram.com/username",
+    image: "/team/monir.jpg",
+  },
+];
+
+export const impactStats = [
+  {
+    number: "750+",
+    title: "Meals Served Monthly",
+    description: "Nutritious meals prepared and served by our volunteers at our community kitchen and mobile food services."
+  },
+  {
+    number: "200+",
+    title: "Active Volunteers",
+    description: "Dedicated community members who donate their time and skills to support our mission."
+  },
+  {
+    number: "8000+",
+    title: "People Supported",
+    description: "Individuals who have received assistance through our various programs and services."
+  },
+  {
+    number: "7+",
+    title: "Community Partners",
+    description: "Organizations and businesses that collaborate with us to maximize our impact."
+  },
+];
+
 export default function AboutPage() {
-  const cofounders = [
-    {
-      id: 1,
-      name: "Sumit Virdi",
-      role: "Co-Founder",
-      linkedin: "https://www.linkedin.com/in/sumit-s-virdi-a0342720a/",
-      instagram: "https://www.instagram.com/s_virdi66",
-      image: "/team/sumit.jpg",
-    },
-    {
-      id: 2,
-      name: "Cody Zhu",
-      role: "Co-Founder",
-      linkedin: "https://www.linkedin.com/in/cody-zhu-2193aa217/",
-      instagram: "https://www.instagram.com/_z.cody",
-      image: "/team/cody.png",
-    },
-    {
-      id: 3,
-      name: "Suhaib Al-Nakshabandi",
-      role: "Co-Founder",
-      linkedin: "https://www.linkedin.com/in/suhaib-al-nakshabandi-7274b21b9/",
-      instagram: "https://www.instagram.com/suhaib.nak",
-      image: "/team/suhaib.jpg",
-    },
-    {
-      id: 4,
-      name: "Faisal Al-Nakshabandi",
-      role: "Co-Founder",
-      linkedin: "https://www.instagram.com/fasooliah",
-      instagram: "https://www.instagram.com/fasooliah",
-      image: "/team/faisal.jpg",
-    },
-  ]
-
-  const executives = [
-    // {
-    //   id: 1,
-    //   name: "Yousef Marei",
-    //   role: "Marketing Director",
-    //   linkedin: "https://linkedin.com/in/username",
-    //   instagram: "https://instagram.com/username",
-    //   image: "/team/yousef.jpg",
-    // },
-    // {
-    //   id: 2,
-    //   name: "Mohammad Saim Khan",
-    //   role: "On-site Director",
-    //   linkedin: "https://linkedin.com/in/username",
-    //   instagram: "https://instagram.com/username",
-    //   image: "/team/saim.jpg",
-    // },
-    // {
-    //   id: 3,
-    //   name: "Rajanvir Binning",
-    //   role: "Financial Director",
-    //   linkedin: "https://linkedin.com/in/username",
-    //   instagram: "https://instagram.com/username",
-    //   image: "/team/rajan.jpg",
-    // },
-    {
-      id: 4,
-      name: "Gurjaap Deol",
-      role: "Social Media",
-      linkedin: "https://linkedin.com/in/username",
-      instagram: "https://instagram.com/username",
-      image: "/team/gurjaap.jpg",
-    },
-    // {
-    //   id: 5,
-    //   name: "Japkaran Brar",
-    //   role: "Social Media",
-    //   linkedin: "https://linkedin.com/in/username",
-    //   instagram: "https://instagram.com/username",
-    //   image: "/placeholder.svg",
-    // },
-    {
-      id: 6,
-      name: "William Zhu",
-      role: "Fundraising",
-      linkedin: "https://linkedin.com/in/username",
-      instagram: "https://instagram.com/username",
-      image: "/team/william.jpg",
-    },
-    {
-      id: 7,
-      name: "Monir Fathalla",
-      role: "Web Development",
-      linkedin: "https://linkedin.com/in/username",
-      instagram: "https://instagram.com/username",
-      image: "/team/monir.jpg",
-    },
-  ]
-
   const milestones = [
     {
       year: "2020",
@@ -143,11 +134,13 @@ export default function AboutPage() {
             </div>
           </div>
           <Image
-            src="/tempabout1.jpeg?height=400&width=500&text=Our Story"
+            src="/tempabout1.jpeg"
             width={500}
             height={400}
             alt="Volunteers working in the community"
             className="rounded-lg object-cover mx-auto"
+            priority
+            quality={80}
           />
         </section>
 
@@ -214,51 +207,19 @@ export default function AboutPage() {
         <section>
           <h2 className="text-2xl font-bold mb-6">Our Impact</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <Card>
-              <CardHeader className="pb-2">
-                <div className="text-4xl font-bold text-primary">750+</div>
-                <CardTitle>Meals Served Monthly</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Nutritious meals prepared and served by our volunteers at our community kitchen and mobile food
-                  services.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader className="pb-2">
-                <div className="text-4xl font-bold text-primary">200+</div>
-                <CardTitle>Active Volunteers</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Dedicated community members who donate their time and skills to support our mission.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader className="pb-2">
-                <div className="text-4xl font-bold text-primary">8000+</div>
-                <CardTitle>People Supported</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Individuals who have received assistance through our various programs and services.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader className="pb-2">
-                <div className="text-4xl font-bold text-primary">7+</div>
-                <CardTitle>Community Partners</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Organizations and businesses that collaborate with us to maximize our impact.
-                </p>
-              </CardContent>
-            </Card>
+            {impactStats.map((stat, index) => (
+              <Card key={index}>
+                <CardHeader className="pb-2">
+                  <div className="text-4xl font-bold text-primary">{stat.number}</div>
+                  <CardTitle>{stat.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    {stat.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </section>
 
@@ -299,7 +260,7 @@ export default function AboutPage() {
                 {executives.map((member) => (
                   <Card key={member.id} className="overflow-hidden flex flex-col">
                     <div className="aspect-square relative">
-                      <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
+                      <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" quality={80} />
                     </div>
                     <CardHeader className="p-3 flex-grow">
                       <CardTitle className="text-sm">{member.name}</CardTitle>
