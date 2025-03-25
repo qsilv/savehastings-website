@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import HeroSection from "@/components/hero-section"
 import MissionSection from "@/components/mission-section"
 import ImpactSection from "@/components/impact-section"
-import EventsSection from "@/components/events-section"
+// import EventsSection from "@/components/events-section"
 import SponsorsPreview from "@/components/sponsors-preview"
 
 /**
