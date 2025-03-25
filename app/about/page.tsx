@@ -9,6 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { LinkedInIcon, InstagramIcon } from '@/components/icons';
 import { SocialLink } from '@/components/social-link';
 import { goodDogFont } from "@/components/ui/fonts"
+import { TeamMemberCard } from "@/components/team-member-card";
 
 export const cofounders = [
   {
@@ -233,48 +234,16 @@ export default function AboutPage() {
 
             <TabsContent value="cofounders" className="space-y-6">
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {cofounders.map((member) => (
-                <Card key={member.id} className="overflow-hidden flex flex-col">
-                <div className="aspect-square relative">
-                  <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
-                </div>
-                <CardHeader className="pb-2 flex-grow">
-                  <CardTitle className="text-lg text-center">{member.name}</CardTitle>
-                  {/* <CardDescription>{member.role}</CardDescription> */}
-                </CardHeader>
-                <CardFooter className="flex justify-center gap-4 pt-0 mt-auto">
-                  <SocialLink href={member.linkedin} label={`${member.name}'s LinkedIn`}>
-                  <LinkedInIcon />
-                  </SocialLink>
-                  <SocialLink href={member.instagram} label={`${member.name}'s Instagram`}>
-                  <InstagramIcon />
-                  </SocialLink>
-                </CardFooter>
-                </Card>
-              ))}
+                {cofounders.map((member) => (
+                  <TeamMemberCard key={member.id} member={member} size="large" />
+                ))}
               </div>
             </TabsContent>
 
             <TabsContent value="executives" className="space-y-6">
               <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
                 {executives.map((member) => (
-                  <Card key={member.id} className="overflow-hidden flex flex-col">
-                    <div className="aspect-square relative">
-                      <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" quality={80} />
-                    </div>
-                    <CardHeader className="p-3 flex-grow">
-                      <CardTitle className="text-sm">{member.name}</CardTitle>
-                      <CardDescription className="text-xs">{member.role}</CardDescription>
-                    </CardHeader>
-                    {/* <CardFooter className="flex justify-center gap-3 p-2 mt-auto">
-                      <SocialLink href={member.linkedin} label={`${member.name}'s LinkedIn`}>
-                        <LinkedInIcon />
-                      </SocialLink>
-                      <SocialLink href={member.instagram} label={`${member.name}'s Instagram`}>
-                        <InstagramIcon />
-                      </SocialLink>
-                    </CardFooter> */}
-                  </Card>
+                  <TeamMemberCard key={member.id} member={member} size="small" />
                 ))}
               </div>
             </TabsContent>
