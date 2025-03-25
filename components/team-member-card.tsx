@@ -28,6 +28,8 @@ export function TeamMemberCard({ member, size = "large" }: TeamMemberCardProps) 
           className="object-cover" 
           sizes={size === "large" ? "(max-width: 768px) 100vw, 25vw" : "(max-width: 768px) 50vw, 16vw"}
           quality={70}
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
         />
       </div>
       

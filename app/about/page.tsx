@@ -78,7 +78,7 @@ export const executives = [
     role: "Web Development",
     linkedin: "https://linkedin.com/in/username",
     instagram: "https://instagram.com/username",
-    image: "/team/monir.jpg",
+    image: "/team/monir.png",
   },
 ];
 
