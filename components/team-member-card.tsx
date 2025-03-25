@@ -27,7 +27,7 @@ export function TeamMemberCard({ member, size = "large" }: TeamMemberCardProps) 
           fill 
           className="object-cover" 
           sizes={size === "large" ? "(max-width: 768px) 100vw, 25vw" : "(max-width: 768px) 50vw, 16vw"}
-          quality={75}
+          quality={70}
         />
       </div>
       
