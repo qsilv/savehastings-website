@@ -86,7 +86,7 @@ export default function HeroSection() {
                   alt="Volunteers helping at a community event"
                   priority
                   className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
-                  quality={80}
+                  quality={60}
                 />
               </div>
             )}
@@ -108,7 +108,6 @@ export default function HeroSection() {
                       width={800}
                       height={550}
                       alt="Volunteers helping at a community event"
-                      priority
                       className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
                       quality={80}
                     />
@@ -117,8 +116,7 @@ export default function HeroSection() {
                     <Image
                       src="/hero/hero2.jpg"
                       width={800}
-                      height={550}
-                      priority
+                      height={550}   
                       alt="Volunteers distributing meals"
                       className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
                       quality={80}
@@ -141,7 +139,6 @@ export default function HeroSection() {
                       src="/hero/hero4.jpeg"
                       width={800}
                       height={550}
-                      priority
                       alt="Community gathering"
                       className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
                       quality={80}
