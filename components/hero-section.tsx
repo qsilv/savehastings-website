@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { goodDogFont } from "./ui/fonts"
-import {useRef} from "react"
+import { useRef, useState, useEffect } from "react"
 import Autoplay from "embla-carousel-autoplay"
 
 import { Button } from "@/components/ui/button"
@@ -25,14 +25,22 @@ import {
  * clearly communicate the organization's purpose and primary actions.
  */
 export default function HeroSection() {
+  // State to track if carousel is ready to be shown
+  const [carouselLoaded, setCarouselLoaded] = useState(false);
+
   // Fix: Create a ref for the autoplay plugin instead of using useMemo
   const plugin = useRef(
-    Autoplay({ 
-      delay: 3000, 
+    Autoplay({
+      delay: 3000,
       stopOnInteraction: true,
-      stopOnMouseEnter: true 
+      stopOnMouseEnter: true
     })
   )
+
+  // Set carousel to loaded after initial render
+  useEffect(() => {
+    setCarouselLoaded(true);
+  }, []);
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-primary-foreground">
@@ -68,68 +76,85 @@ export default function HeroSection() {
 
           {/* Hero carousel with auto-slide and loop */}
           <div className="mx-auto w-full max-w-[500px] lg:max-w-[600px] xl:max-w-[770px] relative lg:order-last">
-            <Carousel 
-              className="w-full" 
-              opts={{
-                loop: true,
-                align: "center",
-              }}
-              plugins={[plugin.current]}
-            >
-              <CarouselContent>
-                <CarouselItem>
-                  <Image
-                    src="/hero/hero1.png"
-                    width={800}
-                    height={550}
-                    alt="Volunteers helping at a community event"
-                    priority
-                    className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
-                    quality={80}
-                  />
-                </CarouselItem>
-                <CarouselItem>
-                  <Image
-                    src="/hero/hero2.jpg"
-                    width={800}
-                    height={550}
-                    priority
-                    alt="Volunteers distributing meals"
-                    className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
-                    quality={80}
-                  />
-                </CarouselItem>
-                <CarouselItem>
-                  <Image
-                    src="/hero/hero3.jpeg"
-                    width={800}
-                    height={550}
-                    alt="Community gathering"
-                    className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
-                    quality={80}
-                    loading="lazy"
+            {/* Show single image before carousel is loaded */}
+            {!carouselLoaded && (
+              <div className="w-full">
+                <Image
+                  src="/hero/hero1.png"
+                  width={800}
+                  height={550}
+                  alt="Volunteers helping at a community event"
+                  priority
+                  className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
+                  quality={80}
+                />
+              </div>
+            )}
+
+            {/* Show carousel when ready */}
+            <div className={` ${carouselLoaded ? 'opacity-100' : 'opacity-0 h-0'}`}>
+              <Carousel
+                className="w-full"
+                opts={{
+                  loop: true,
+                  align: "center",
+                }}
+                plugins={[plugin.current]}
+              >
+                <CarouselContent>
+                  <CarouselItem>
+                    <Image
+                      src="/hero/hero1.png"
+                      width={800}
+                      height={550}
+                      alt="Volunteers helping at a community event"
+                      priority
+                      className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
+                      quality={80}
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <Image
+                      src="/hero/hero2.jpg"
+                      width={800}
+                      height={550}
+                      priority
+                      alt="Volunteers distributing meals"
+                      className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
+                      quality={80}
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <Image
+                      src="/hero/hero3.jpeg"
+                      width={800}
+                      height={550}
+                      alt="Community gathering"
+                      className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
+                      quality={80}
+                      loading="lazy"
                     // placeholder="blur"
-                  />
-                </CarouselItem>
-                <CarouselItem>
-                  <Image
-                    src="/hero/hero4.jpeg"
-                    width={800}
-                    height={550}
-                    priority
-                    alt="Community gathering"
-                    className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
-                    quality={80}
-                 />
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious className="lg:-left-10 left-2 z-10" />
-              <CarouselNext className="lg:-right-10 right-2 z-10" />
-            </Carousel>
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <Image
+                      src="/hero/hero4.jpeg"
+                      width={800}
+                      height={550}
+                      priority
+                      alt="Community gathering"
+                      className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
+                      quality={80}
+                    />
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className={`lg:-left-10 left-2 z-10 transition-all duration-3000 ${carouselLoaded ? 'opacity-100' : 'opacity-0'}`} />
+                <CarouselNext className={`lg:-right-10 right-2 z-10 transition-all duration-3000 ${carouselLoaded ? 'opacity-100' : 'opacity-0'}`} />
+              </Carousel>
+            </div>
           </div>
         </div>
       </div>
     </section>
   )
 }
-
