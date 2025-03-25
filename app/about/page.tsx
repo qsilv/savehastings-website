@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-import { LinkedInIcon, InstagramIcon } from '@/components/icons';
-import { SocialLink } from '@/components/social-link';
+// import { LinkedInIcon, InstagramIcon } from '@/components/icons';
+// import { SocialLink } from '@/components/social-link';
 import { goodDogFont } from "@/components/ui/fonts"
 import { TeamMemberCard } from "@/components/team-member-card";
 
