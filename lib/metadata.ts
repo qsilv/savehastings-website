@@ -1,5 +1,25 @@
 import { Metadata } from 'next'
 
+// Default keywords that will be included on all pages
+const defaultKeywords = [
+  'East Hastings', 
+  'Downtown Eastside', 
+  'DTES',
+  'Vancouver', 
+  'Van', 
+  'volunteering Vancouver',
+  'homeless support', 
+  'community outreach',
+  'Vancouver volunteers',
+  'East Hastings community',
+  'BC homelessness',
+  'Vancouver charity',
+  'help DTES',
+  'Van volunteer opportunities',
+  'Hastings Street',
+  'Vancouver social impact'
+]
+
 // Base metadata configuration that can be extended
 export const baseMetadata: Metadata = {
   icons: {
@@ -21,14 +41,15 @@ export const baseMetadata: Metadata = {
         alt: 'SAVEHASTINGS volunteers helping in Vancouver\'s Downtown Eastside',
       }
     ],
-  }
+  },
+  keywords: defaultKeywords,
 }
 
 // Helper function to create page metadata
 export function createMetadata({
   title,
   description,
-  keywords,
+  keywords = [],
   useDefaultImage = true,
   ogImage,
   ogImageAlt = 'SAVEHASTINGS volunteers helping in Vancouver\'s Downtown Eastside',
@@ -36,13 +57,16 @@ export function createMetadata({
 }: {
   title: string;
   description: string;
-  keywords: string[];
+  keywords?: string[];
   useDefaultImage?: boolean;
   ogImage?: string;
   ogImageAlt?: string;
   pagePath?: string;
 }): Metadata {
   const url = `https://savehastings.com${pagePath}`;
+  
+  // Combine default keywords with page-specific keywords for comprehensive coverage
+  const combinedKeywords = [...new Set([...defaultKeywords, ...keywords])];
   
   // Use the default volunteer image or a custom one if specified
   const images = useDefaultImage ? 
@@ -59,7 +83,7 @@ export function createMetadata({
   return {
     title,
     description,
-    keywords,
+    keywords: combinedKeywords,
     icons: baseMetadata.icons,
     openGraph: {
       ...baseMetadata.openGraph,
