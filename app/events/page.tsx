@@ -1,11 +1,21 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, Calendar, Clock, MapPin, Filter, Search, Users } from "lucide-react"
+import { createMetadata } from '@/lib/metadata'
+
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
+
+export const metadata = createMetadata({
+  title: 'Events & Volunteer Opportunities | #SAVEHASTINGS Vancouver',
+  description: 'Find upcoming events and volunteer opportunities with #SAVEHASTINGS to support Vancouver\'s Downtown Eastside community. Join us in making a difference.',
+  keywords: ['Vancouver community events', 'DTES volunteer opportunities', 'homeless support events', 'Vancouver charity events', 'Downtown Eastside activities'],
+  useDefaultImage: true, // Use the volunteer image
+  pagePath: '/events'
+})
 
 /**
  * Event interface defining the structure of event data

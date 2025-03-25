@@ -18,6 +18,12 @@ export const metadata = {
     "charity"
   ],
   author: "SAVEHASTINGS Team",
+  metadataBase: new URL('https://savehastings.com'),
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({

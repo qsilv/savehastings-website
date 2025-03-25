@@ -1,7 +1,16 @@
+import { createMetadata } from '@/lib/metadata'
+import { ArrowLeft, Clock, MapPin } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowLeft, Clock, MapPin } from "lucide-react"
 import VolunteerForm from "@/components/volunteer-form"
+
+export const metadata = createMetadata({
+  title: 'Volunteer with #SAVEHASTINGS | Make an Impact in Vancouver\'s DTES',
+  description: 'Join our team of dedicated volunteers making a difference in Vancouver\'s Downtown Eastside. Register today to help transform lives in our community.',
+  keywords: ['volunteer Vancouver', 'DTES volunteers', 'homelessness volunteer', 'community service Vancouver', 'Vancouver Downtown Eastside volunteering'],
+  useDefaultImage: true, // Use the volunteer image
+  pagePath: '/volunteer'
+})
 
 export default function VolunteerPage() {
   return (

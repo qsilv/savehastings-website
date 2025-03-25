@@ -1,9 +1,19 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, ExternalLink, Mail } from "lucide-react"
+import { createMetadata } from '@/lib/metadata'
+
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+
+export const metadata = createMetadata({
+  title: 'Our Sponsors & Partnership Opportunities | #SAVEHASTINGS',
+  description: 'See the organizations supporting our work in Vancouver\'s Downtown Eastside and learn how your business can become a sponsor of #SAVEHASTINGS.',
+  keywords: ['SAVEHASTINGS sponsors', 'Vancouver homelessness sponsorship', 'community partnerships', 'corporate social responsibility Vancouver', 'sponsor homeless initiatives'],
+  useDefaultImage: true, // Use the volunteer image
+  pagePath: '/sponsors'
+})
 
 export const sponsors = [
   {

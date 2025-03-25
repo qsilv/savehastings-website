@@ -7,6 +7,14 @@ import MissionSection from "@/components/mission-section"
 import ImpactSection from "@/components/impact-section"
 // import EventsSection from "@/components/events-section"
 import SponsorsPreview from "@/components/sponsors-preview"
+import { createMetadata } from '@/lib/metadata'
+
+export const metadata = createMetadata({
+  title: '#SAVEHASTINGS - Supporting Vancouver\'s Downtown Eastside',
+  description: 'Join our volunteer movement making a meaningful impact in Vancouver\'s Downtown Eastside. Help provide meals, support, and community for those experiencing homelessness.',
+  keywords: ['Vancouver homelessness', 'Downtown Eastside', 'volunteer', 'community support', 'DTES', 'homeless support'],
+  useDefaultImage: true, // Use the volunteer image
+})
 
 /**
  * HomePage Component

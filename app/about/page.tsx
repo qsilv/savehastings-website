@@ -10,6 +10,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 // import { SocialLink } from '@/components/social-link';
 import { goodDogFont } from "@/components/ui/fonts"
 import { TeamMemberCard } from "@/components/team-member-card";
+import { createMetadata } from '@/lib/metadata'
+
+export const metadata = createMetadata({
+  title: 'About #SAVEHASTINGS - Our Mission & Team | Vancouver DTES',
+  description: 'Learn about our youth-led movement supporting the homeless population in Vancouver\'s Downtown Eastside through community-driven initiatives and direct support.',
+  keywords: ['about SAVEHASTINGS', 'Vancouver homelessness mission', 'DTES support team', 'community volunteering', 'Vancouver homelessness'],
+  useDefaultImage: true, // Use the volunteer image
+  pagePath: '/about'
+})
 
 export const cofounders = [
   {
