@@ -87,6 +87,7 @@ export default function HeroSection() {
                   priority
                   className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
                   quality={60}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
                 />
               </div>
             )}
@@ -110,6 +111,8 @@ export default function HeroSection() {
                       alt="Volunteers helping at a community event"
                       className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
                       quality={80}
+                      priority
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </CarouselItem>
                   <CarouselItem>

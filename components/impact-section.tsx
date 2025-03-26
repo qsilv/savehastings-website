@@ -19,6 +19,7 @@ export default function ImpactSection() {
             width={600}
             height={400}
             alt="Volunteers distributing meals"
+            priority
             className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
           />
             <div className="flex flex-col justify-center space-y-4">

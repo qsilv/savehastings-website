@@ -39,9 +39,9 @@ export default function ClientLayout({
 }>) {
   // Scroll to top whenever the children (page content) changes
   // This ensures users always start at the top when navigating between pages
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [children])
+  // useEffect(() => {
+  //   window.scrollTo(0, 0)
+  // }, [children])
 
   return (
     <html lang="en" className="light">
