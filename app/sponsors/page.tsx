@@ -154,7 +154,7 @@ export default function SponsorsPage() {
               </li>
             </ul>
             <Button asChild className="gap-1">
-              <a href="mailto:hashtagsavehastings@gmail.com">
+              <a href="mailto:contact@savehastings.com">
                 Contact Us <Mail className="h-4 w-4" />
               </a>
             </Button>

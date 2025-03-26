@@ -197,8 +197,8 @@ export default function ClientLayout({
                     <p>Vancouver, BC V6B 2J4</p>
                     <p>Canada</p>
                     <p className="pt-2">
-                      <a href="mailto:hashtagsavehastings@gmail.com" className="hover:text-foreground">
-                        hashtagsavehastings@gmail.com
+                      <a href="mailto:contact@savehastings.com" className="hover:text-foreground">
+                        contact@savehastings.com
                       </a>
                     </p>
                     {/* <p>
