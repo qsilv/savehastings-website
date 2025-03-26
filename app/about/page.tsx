@@ -309,7 +309,7 @@ export default function AboutPage() {
             </div>
             <div className="hidden md:block">
               <Image
-          src="/about2.jpeg?height=280&width=420&text=Join Our Mission"
+          src="/about2.jpeg"
           width={420}
           height={280}
           alt="Join our mission"
