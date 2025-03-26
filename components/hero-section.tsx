@@ -80,13 +80,13 @@ export default function HeroSection() {
             {!carouselLoaded && (
               <div className="w-full">
                 <Image
-                  src="/hero/hero1.png"
+                  src="/hero/hero1.webp"
                   width={800}
                   height={550}
                   alt="Volunteers helping at a community event"
                   priority
                   className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
-                  quality={80}
+                  quality={100}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
                 />
               </div>
@@ -105,14 +105,14 @@ export default function HeroSection() {
                 <CarouselContent>
                   <CarouselItem>
                     <Image
-                      src="/hero/hero1.png"
+                      src="/hero/hero1.webp"
                       width={800}
                       height={550}
                       alt="Volunteers helping at a community event"
                       className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
-                      quality={80}
+                      quality={100}
                       priority
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </CarouselItem>
                   <CarouselItem>
