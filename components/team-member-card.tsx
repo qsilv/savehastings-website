@@ -35,7 +35,7 @@ export function TeamMemberCard({ member, size = "large" }: TeamMemberCardProps) 
         <>
           <CardHeader className="pb-2 text-center">
             <CardTitle className="text-lg">{member.name}</CardTitle>
-            <p className="text-sm text-muted-foreground">{member.role}</p>
+            {/* <p className="text-sm text-muted-foreground">{member.role}</p> */}
           </CardHeader>
           <CardFooter className="flex justify-center gap-4 pt-0 pb-4">
             <SocialLink href={member.linkedin} label={`${member.name}'s LinkedIn`}>

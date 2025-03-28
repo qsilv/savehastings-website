@@ -87,7 +87,7 @@ export const executives = [
     instagram: "https://instagram.com/username",
     image: "/team/mazen.jpeg",
   },
-  {id: 8,
+  {id: 9,
     name: "Nour M.",
     role: "Digital Content",
     linkedin: "https://linkedin.com/in/username",
