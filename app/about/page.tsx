@@ -80,6 +80,20 @@ export const executives = [
     instagram: "https://instagram.com/username",
     image: "/team/monir.png",
   },
+  {id: 8,
+    name: "Mazen Khalil",
+    role: "",
+    linkedin: "https://linkedin.com/in/username",
+    instagram: "https://instagram.com/username",
+    image: "/team/mazen.jpeg",
+  },
+  {id: 8,
+    name: "Nour M.",
+    role: "",
+    linkedin: "https://linkedin.com/in/username",
+    instagram: "https://instagram.com/username",
+    image: "/team/nour.png",
+  },
 ];
 
 export const impactStats = [
@@ -237,7 +251,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold mb-6">Our Team</h2>
           <Tabs defaultValue="cofounders" className="w-full">
             <TabsList className="mb-6">
-              <TabsTrigger value="cofounders">Co-Founders</TabsTrigger>
+              <TabsTrigger value="cofounders">Directors</TabsTrigger>
               <TabsTrigger value="executives">Executives</TabsTrigger>
             </TabsList>
 
