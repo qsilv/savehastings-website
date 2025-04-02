@@ -59,14 +59,16 @@ export default function HomePage() {
                 Make a real difference in the lives of those experiencing homelessness in Vancouver's Downtown Eastside.
               </p>
             </div>
-            <div className="space-x-4">
-              <Link href="/volunteer">
-                <Button className="gap-1">
-                  Register Now <ArrowRight className="h-4 w-4" />
+            <div className="flex flex-row gap-2 w-full max-w-md">
+              <Link href="/volunteer" className="flex-1">
+                <Button className="gap-1 w-full text-sm sm:text-base">
+                  Register Now <ArrowRight className="h-3 w-3" />
                 </Button>
               </Link>
-              <Link href="/sponsors">
-                <Button variant="outline">Learn About Sponsorship</Button>
+              <Link href="/sponsors" className="flex-1">
+                <Button variant="outline" className="w-full text-sm sm:text-base">
+                  Learn About Sponsorship
+                </Button>
               </Link>
             </div>
           </div>

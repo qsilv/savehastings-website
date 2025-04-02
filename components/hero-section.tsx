@@ -60,14 +60,14 @@ export default function HeroSection() {
             </div>
 
             {/* Call-to-action buttons */}
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link href="/volunteer">
-                <Button size="lg" className="gap-1">
+            <div className="flex flex-row gap-2 w-full">
+              <Link href="/volunteer" className="flex-1">
+                <Button className="gap-1 w-full text-sm sm:text-base">
                   Volunteer Now <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/sponsors">
-                <Button size="lg" variant="outline">
+              <Link href="/sponsors" className="flex-1">
+                <Button variant="outline" className="w-full text-sm sm:text-base">
                   Become a Sponsor
                 </Button>
               </Link>
@@ -87,7 +87,7 @@ export default function HeroSection() {
                   priority
                   className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
                   quality={80}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
             )}
@@ -119,7 +119,7 @@ export default function HeroSection() {
                     <Image
                       src="/hero/hero2.jpg"
                       width={800}
-                      height={550}   
+                      height={550}
                       alt="Volunteers distributing meals"
                       className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
                       quality={80}
