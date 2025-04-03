@@ -29,16 +29,16 @@ export const baseMetadata: Metadata = {
     apple: { url: '/favicon.svg', type: 'image/svg+xml' }
   },
   openGraph: {
-    siteName: '#SAVEHASTINGS',
+    siteName: '#SaveHastings',
     locale: 'en_CA',
     type: 'website',
     // Default volunteer image
     images: [
       {
-        url: 'https://savehastings.com/hero/hero1.png',
+        url: 'https://www.savehastings.com/hero/hero1.webp',
         width: 800,
         height: 550,
-        alt: 'SAVEHASTINGS volunteers helping in Vancouver\'s Downtown Eastside',
+        alt: '#SaveHastings volunteers helping in Vancouver\'s Downtown Eastside',
       }
     ],
   },
@@ -52,7 +52,7 @@ export function createMetadata({
   keywords = [],
   useDefaultImage = true,
   ogImage,
-  ogImageAlt = 'SAVEHASTINGS volunteers helping in Vancouver\'s Downtown Eastside',
+  ogImageAlt = '#SaveHastings volunteers helping in Vancouver\'s Downtown Eastside',
   pagePath = '',
 }: {
   title: string;
@@ -63,7 +63,7 @@ export function createMetadata({
   ogImageAlt?: string;
   pagePath?: string;
 }): Metadata {
-  const url = `https://savehastings.com${pagePath}`;
+  const url = `https://www.savehastings.com${pagePath}`;
   
   // Combine default keywords with page-specific keywords for comprehensive coverage
   const combinedKeywords = [...new Set([...defaultKeywords, ...keywords])];
@@ -73,7 +73,7 @@ export function createMetadata({
     baseMetadata.openGraph?.images : 
     [
       {
-        url: `https://savehastings.com/${ogImage}`,
+        url: `https://www.savehastings.com/${ogImage}`,
         width: 1200,
         height: 630,
         alt: ogImageAlt,
