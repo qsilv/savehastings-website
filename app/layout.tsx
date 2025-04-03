@@ -6,19 +6,23 @@ import { Analytics } from "@vercel/analytics/react"
 export const metadata = {
   title: "#SAVEHASTINGS - Supporting Vancouver's Downtown Eastside",
   description:
-    "Join our community of volunteers dedicated to making a meaningful impact in the lives of those experiencing homelessness.",
+    "Join our community of volunteers dedicated to making a meaningful impact in the lives of those experiencing homelessness. Help us Save Hastings!",
   keywords: [
     "SAVEHASTINGS",
-    "Vancouver",
-    "Downtown Eastside",
-    "homelessness",
-    "volunteers",
-    "community support",
-    "non-profit",
-    "charity"
+    "save hastings",
+    "hastings homeless",
+    "east hastings homeless",
+    "volunteer downtown eastside",
+    "downtown eastside volunteer",
+    "hastings vancouver homeless",
+    "save vancouver streets",
+    "homeless charity hastings",
+    "downtown eastside",
+    "homeless support vancouver",
+    "dtes volunteer"
   ],
   author: "SAVEHASTINGS Team",
-  metadataBase: new URL('https://savehastings.com'),
+  metadataBase: new URL('https://www.savehastings.com'),
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
