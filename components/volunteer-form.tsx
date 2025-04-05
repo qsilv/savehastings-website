@@ -140,7 +140,7 @@ export default function VolunteerForm() {
         </div>
 
         <div className="space-y-2">
-          <Label>Areas of Interest (Select all that apply) *</Label>
+          <Label>Areas of Interest (Select all that apply)</Label>
           <div className="grid gap-2 sm:grid-cols-2">
             {INTERESTS.map((interest) => (
               <div className="flex items-center space-x-2" key={interest}>
