@@ -19,7 +19,8 @@ export const metadata = {
     "homeless charity hastings",
     "downtown eastside",
     "homeless support vancouver",
-    "dtes volunteer"
+    "dtes volunteer",
+    "volunteer hastings"
   ],
   author: "SAVEHASTINGS Team",
   metadataBase: new URL('https://www.savehastings.com'),
