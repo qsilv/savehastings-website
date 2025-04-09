@@ -9,6 +9,8 @@ import { goodDogFont } from "@/components/ui/fonts"
 import { inter } from "@/components/ui/fonts"
 import { FacebookIcon, InstagramIcon, LinkedInIcon } from '@/components/icons';
 import { SocialLink } from '@/components/social-link';
+import DonationButton from "@/components/donation-button"
+
 
 
 
@@ -77,13 +79,10 @@ export default function ClientLayout({
 
               {/* CTA button and mobile navigation */}
               <div className="ml-auto flex items-center gap-2">
-                <Link
-                  href="/volunteer"
-                  className="hidden md:inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                >
-                  Get Involved
-                </Link>
-                <MobileNav />
+              <div className="ml-auto flex items-center gap-2">
+                  <DonationButton className="hidden md:inline-flex" />
+                  <MobileNav />
+                </div>
               </div>
             </div>
           </header>

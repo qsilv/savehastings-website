@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
-
+import DonationButton from "@/components/donation-button"
 import { goodDogFont } from "@/components/ui/fonts"
 
 
@@ -98,10 +98,8 @@ export default function MobileNav() {
           </nav>
 
           {/* Call-to-action button */}
-          <div className="mt-6">
-            <Link href="/volunteer" className="w-full" onClick={handleLinkClick}>
-              <Button className="w-full">Get Involved</Button>
-            </Link>
+            <div className="mt-6">
+            <DonationButton className="w-full" />
           </div>
         </div>
       </SheetContent>
