@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect} from "react"
 import { CheckCircle2 } from "lucide-react"
 import { Turnstile } from "@marsidev/react-turnstile"
 
@@ -28,6 +28,17 @@ export default function VolunteerForm() {
   )
 
   const formRef = useRef<HTMLFormElement>(null)
+  const successRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (showSuccess) {
+      // Scroll to top of page when showing success message
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  }, [showSuccess]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -191,3 +202,4 @@ export default function VolunteerForm() {
     </form>
   )
 }
+
