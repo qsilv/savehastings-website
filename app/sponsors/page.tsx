@@ -46,7 +46,7 @@ export const sponsors = [
   },
   {
     id: 5,
-    name: "Sabzi",
+    name: "Sabzi Mandi",
     logo: "/partners/sabzi.png",
     description: "Family-owned and operated premier grocery store chain in Canada.",
     website: "https://sabzimandicanada.com/",

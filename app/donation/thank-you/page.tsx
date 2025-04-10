@@ -45,11 +45,11 @@ export default async function ThankYouPage({ searchParams }: { searchParams: { s
               Eastside.
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4">
+          {/* <CardContent className="space-y-4">
             <p className="text-center">
               We've sent a receipt to your email. Your contribution makes a real difference in our community.
             </p>
-          </CardContent>
+          </CardContent> */}
           <CardFooter className="flex justify-center">
             <Link href="/">
               <Button>Return to Homepage</Button>
