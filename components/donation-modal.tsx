@@ -162,7 +162,7 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
 
             <div className="py-4">
   {clientSecret && (
-    <div className="h-[400px] md:h-[500px] ">
+    <div className="h-[60vh] md:h-[65vh]">
       <EmbeddedCheckoutProvider stripe={stripePromise} options={{ clientSecret }}>
         <EmbeddedCheckout />
       </EmbeddedCheckoutProvider>
