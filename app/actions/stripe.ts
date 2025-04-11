@@ -13,10 +13,11 @@ export async function createCheckoutSession(amount: number) {
   // Create Checkout Session
   const session = await stripe.checkout.sessions.create({
     ui_mode: "embedded",
+    submit_type: 'donate',
     line_items: [
       {
         price_data: {
-          currency: "usd",
+          currency: "cad",
           product_data: {
             name: "Donation to #SAVEHASTINGS",
             description: "Supporting Vancouver's Downtown Eastside",
