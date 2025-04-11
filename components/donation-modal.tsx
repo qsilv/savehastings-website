@@ -156,7 +156,7 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
                     <DialogHeader>
                         <DialogTitle>Complete Your Donation</DialogTitle>
                         <DialogDescription>
-                            Please provide your payment details to complete your donation of ${amount}.
+                            Please provide payment details to complete your donation of ${amount}.
                         </DialogDescription>
                     </DialogHeader>
 
