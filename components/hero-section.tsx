@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react"
 import { goodDogFont } from "./ui/fonts"
 import { useRef, useState, useEffect } from "react"
 import Autoplay from "embla-carousel-autoplay"
+import DonationButton from "@/components/donation-button"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -61,11 +62,18 @@ export default function HeroSection() {
 
             {/* Call-to-action buttons */}
             <div className="flex flex-row gap-2 w-full">
-              <Link href="/volunteer" className="flex-1">
+              {/* Mobile-only donation button */}
+              <div className="flex-1 block md:hidden">
+                <DonationButton className="w-full text-sm sm:text-base" />
+              </div>
+              
+              {/* Desktop-only volunteer button */}
+              <Link href="/volunteer" className="flex-1 hidden md:block">
                 <Button className="gap-1 w-full text-sm sm:text-base">
                   Volunteer Now <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
+              
               <Link href="/sponsors" className="flex-1">
                 <Button variant="outline" className="w-full text-sm sm:text-base">
                   Become a Sponsor
