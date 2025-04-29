@@ -48,39 +48,47 @@ export default function HeroSection() {
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 xl:grid-cols-[0.8fr_1.2fr]">
           {/* Text content column */}
-          <div className="flex flex-col justify-center space-y-4">
+            <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                <span className={`text-primary ${goodDogFont.className} text-enhanced`}>#SAVEHASTINGS</span>
+              <span className={`text-primary ${goodDogFont.className} text-enhanced`}>#SAVEHASTINGS</span>
               </h1>
               <p className="text-2xl font-semibold">Supporting Vancouver's Downtown Eastside</p>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                Join our community of volunteers dedicated to making a meaningful impact in the lives of those
-                experiencing homelessness.
+              Join our community of volunteers dedicated to making a meaningful impact in the lives of those
+              experiencing homelessness.
               </p>
             </div>
 
             {/* Call-to-action buttons */}
-            <div className="flex flex-row gap-2 w-full">
+            <div className="flex flex-row gap-2 w-full flex-wrap">
               {/* Mobile-only donation button */}
               <div className="flex-1 block md:hidden">
-                <DonationButton className="w-full text-sm sm:text-base" />
+              <DonationButton className="w-full text-sm sm:text-base" />
               </div>
-              
+
+              {/* Mobile-only sponsor button (visible on mobile, hidden on desktop) */}
+              <Link href="/volunteer" className="flex-1 block md:hidden">
+              <Button variant="outline" className="w-full text-sm sm:text-base">
+                Get Involved
+              </Button>
+              </Link>
+
               {/* Desktop-only volunteer button */}
               <Link href="/volunteer" className="flex-1 hidden md:block">
-                <Button className="gap-1 w-full text-sm sm:text-base">
-                  Volunteer Now <ArrowRight className="h-4 w-4" />
-                </Button>
+              <Button className="gap-1 w-full text-sm sm:text-base">
+                Get Involved <ArrowRight className="h-4 w-4" />
+              </Button>
               </Link>
-              
-              <Link href="/sponsors" className="flex-1">
-                <Button variant="outline" className="w-full text-sm sm:text-base">
-                  Become a Sponsor
-                </Button>
+
+              {/* Desktop-only sponsor button */}
+              <Link href="/sponsors" className="flex-1 hidden md:block">
+              <Button variant="outline" className="w-full text-sm sm:text-base">
+                Become a Sponsor
+              </Button>
               </Link>
             </div>
-          </div>
+            </div>
 
           {/* Hero carousel with auto-slide and loop */}
           <div className="mx-auto w-full max-w-[500px] lg:max-w-[600px] xl:max-w-[770px] relative lg:order-last">

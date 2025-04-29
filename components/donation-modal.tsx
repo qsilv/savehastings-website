@@ -17,6 +17,7 @@ import { Heart, Loader2 } from "lucide-react"
 import { createCheckoutSession } from "@/app/actions/stripe"
 import { EmbeddedCheckout, EmbeddedCheckoutProvider } from "@stripe/react-stripe-js"
 import { loadStripe } from "@stripe/stripe-js"
+import { goodDogFont } from "./ui/fonts"
 
 // Initialize Stripe
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || "")
@@ -83,7 +84,7 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
                     <DialogHeader>
                         <DialogTitle className="flex items-center gap-2">
                             <Heart className="h-5 w-5 text-primary" />
-                            Donate to #SAVEHASTINGS
+                            Donate to <span className={goodDogFont.className}>#SAVEHASTINGS</span>
                         </DialogTitle>
                         <DialogDescription>
                             Your donation helps support the homeless population in Vancouver's Downtown Eastside.
