@@ -44,7 +44,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-primary-foreground">
+    <section className="w-full py-12 md:py-24 lg:py-30 xl:py-40 bg-primary-foreground">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 xl:grid-cols-[0.8fr_1.2fr]">
           {/* Text content column */}
