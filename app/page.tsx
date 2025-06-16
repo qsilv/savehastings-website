@@ -65,7 +65,7 @@ export default function HomePage() {
                   Register Now <ArrowRight className="h-3 w-3" />
                 </Button>
               </Link>
-              <Link href="/sponsors" className="flex-1">
+              <Link href="/sponsors#become-sponsor" className="flex-1">
                 <Button variant="outline" className="w-full text-sm sm:text-base">
                   Learn About Sponsorship
                 </Button>

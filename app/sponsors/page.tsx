@@ -125,7 +125,7 @@ export default function SponsorsPage() {
             <h2 className="text-2xl font-bold mb-4">Become a Sponsor</h2>
             <p className="mb-4 text-muted-foreground">
               Join our community of sponsors and help make a difference in the lives of those experiencing homelessness
-              in Vancouver's Downtown Eastside.
+              in Vancouver's Downtown Eastside. Reach out to help fund or provide food to a future event.
             </p>
             <ul className="space-y-2 mb-6">
               <li className="flex items-start gap-2">
