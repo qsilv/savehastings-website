@@ -100,7 +100,7 @@ export const impactStats = [
   {
     number: "750+",
     title: "Meals Served Monthly",
-    description: "Nutritious meals prepared and served by our volunteers at our community kitchen and mobile food services."
+    description: "Nutritious meals prepared and served by our volunteers through mobile food services."
   },
   {
     number: "200+",
@@ -219,13 +219,13 @@ export default function AboutPage() {
               </CardContent>
             </Card>
           </div>
-          <div className="mt-8 text-center">
+          {/* <div className="mt-8 text-center">
             <p className="max-w-3xl mx-auto text-muted-foreground">
               Our mission is to support the homeless population in Vancouver's Downtown Eastside through
               community-driven initiatives, direct support, and advocacy, working toward a future where everyone has
               access to safe housing, nutritious food, healthcare, and community connection.
             </p>
-          </div>
+          </div> */}
         </section>
 
         <section>
