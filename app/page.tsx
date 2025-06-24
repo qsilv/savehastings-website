@@ -14,7 +14,7 @@ import VantaBackground from '@/components/vanta-background'
 export const metadata = createMetadata({
   title: '#SAVEHASTINGS - Supporting Vancouver\'s Downtown Eastside',
   description: 'Join our volunteer movement making a meaningful impact in Vancouver\'s Downtown Eastside. Help provide meals, support, and community for those experiencing homelessness.',
-  keywords: ['Vancouver homelessness', 'Downtown Eastside', 'volunteer', 'community support', 'DTES', 'homeless support'],
+  keywords: ['east hastings', 'volunteer east hastings','Vancouver homelessness', 'Downtown Eastside', 'volunteer', 'community support', 'DTES', 'homeless support'],
   useDefaultImage: true, // Use the volunteer image
 })
 

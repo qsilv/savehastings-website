@@ -192,9 +192,9 @@ export default function ClientLayout({
                 <div>
                   <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                   <address className="not-italic text-sm text-muted-foreground space-y-2">
-                    <p>399 Carral St</p>
+                    {/* <p>399 Carral St</p>
                     <p>Vancouver, BC V6B 2J4</p>
-                    <p>Canada</p>
+                    <p>Canada</p> */}
                     <p className="pt-2">
                       <a href="mailto:contact@savehastings.com" className="hover:text-foreground">
                         contact@savehastings.com

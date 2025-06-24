@@ -13,7 +13,7 @@ export const metadata = {
     "hastings homeless",
     "east hastings homeless",
     "volunteer downtown eastside",
-    "downtown eastside volunteer",
+    "east hastings volunteer",
     "hastings vancouver homeless",
     "save vancouver streets",
     "homeless charity hastings",

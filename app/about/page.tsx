@@ -59,7 +59,7 @@ export const executives = [
   {
     id: 4,
     name: "Gurjaap Deol",
-    role: "Social Media",
+    role: "Supply Manager",
     linkedin: "https://linkedin.com/in/username",
     instagram: "https://instagram.com/username",
     image: "/team/gurjaap.jpg",
@@ -82,7 +82,7 @@ export const executives = [
   },
   {id: 8,
     name: "Mazen Khalil",
-    role: "Site Leader",
+    role: "On-Site Leader",
     linkedin: "https://linkedin.com/in/username",
     instagram: "https://instagram.com/username",
     image: "/team/mazen.jpeg",
@@ -99,7 +99,7 @@ export const executives = [
 export const impactStats = [
   {
     number: "750+",
-    title: "Meals Served Monthly",
+    title: "Meals Monthly",
     description: "Nutritious meals prepared and served by our volunteers through mobile food services."
   },
   {
