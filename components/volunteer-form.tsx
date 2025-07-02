@@ -14,8 +14,6 @@ import { Card } from "@/components/ui/card"
 const INTERESTS = [
   "Meal Service",
   "Outreach",
-  "Administrative",
-  "Events",
   "Fundraising",
   "Other"
 ]
