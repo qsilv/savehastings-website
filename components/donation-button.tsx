@@ -17,8 +17,8 @@ export default function DonationButton({ className, variant = "default", size = 
   return (
     <>
       <Button onClick={() => setIsModalOpen(true)} className={className} variant={variant} size={size}>
+        <Heart className="h-4 w-4" />
         Donate Now
-        <Heart className="mr-2 h-4 w-4" />
       </Button>
 
       <DonationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

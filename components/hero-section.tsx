@@ -17,99 +17,110 @@ import {
 } from "@/components/ui/carousel"
 
 /**
- * HeroSection Component
+ * HeroSection Component - Redesigned
  *
- * The main hero section displayed at the top of the homepage.
- * Features a headline, description, call-to-action buttons, and a hero image.
- *
- * This component is designed to be the first thing visitors see and should
- * clearly communicate the organization's purpose and primary actions.
+ * Clean, modern hero section with enhanced visual hierarchy
+ * Features large imagery, clear messaging, and prominent CTAs
  */
 export default function HeroSection() {
-  // State to track if carousel is ready to be shown
   const [carouselLoaded, setCarouselLoaded] = useState(false);
 
-  // Fix: Create a ref for the autoplay plugin instead of using useMemo
   const plugin = useRef(
     Autoplay({
-      delay: 3000,
+      delay: 4000,
       stopOnInteraction: true,
       stopOnMouseEnter: true
     })
   )
 
-  // Set carousel to loaded after initial render
   useEffect(() => {
     setCarouselLoaded(true);
   }, []);
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-30 xl:py-40 bg-primary-foreground">
+    <section className="w-full py-16 md:py-24 lg:py-32 xl:py-40 bg-background/50">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 xl:grid-cols-[0.8fr_1.2fr]">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Text content column */}
-            <div className="flex flex-col justify-center space-y-4">
-            <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-              <span className={`text-primary ${goodDogFont.className} text-enhanced`}>#SAVEHASTINGS</span>
-              </h1>
-              <p className="text-2xl font-semibold">Supporting Vancouver's Downtown Eastside</p>
-              <p className="max-w-[600px] text-muted-foreground md:text-xl">
-              Join our community of volunteers dedicated to making a meaningful impact in the lives of those
-              experiencing homelessness.
+          <div className="flex flex-col justify-center space-y-8">
+            <div className="space-y-6">
+              <div className="inline-block">
+                <h1 className={`text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-primary ${goodDogFont.className}`}>
+                  #SAVEHASTINGS
+                </h1>
+                <div className="h-1.5 bg-primary mt-3 rounded-full" />
+              </div>
+              
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
+                Supporting Vancouver's Downtown Eastside
+              </h2>
+              
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-[600px]">
+                Join our community of volunteers dedicated to making a meaningful impact in the lives of those
+                experiencing homelessness. Every action counts.
               </p>
             </div>
 
             {/* Call-to-action buttons */}
-            <div className="flex flex-row gap-2 w-full flex-wrap">
-              {/* Mobile-only donation button */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              {/* Mobile: Donation + Get Involved (since nav donation is hidden) */}
               <div className="flex-1 block md:hidden">
-              <DonationButton className="w-full text-sm sm:text-base" />
+                <DonationButton className="w-full text-base" size="lg" />
               </div>
-
-              {/* Mobile-only sponsor button (visible on mobile, hidden on desktop) */}
               <Link href="/volunteer" className="flex-1 block md:hidden">
-              <Button variant="outline" className="w-full text-sm sm:text-base">
-                Get Involved
-              </Button>
+                <Button variant="outline" size="lg" className="w-full text-base">
+                  Get Involved
+                </Button>
               </Link>
 
-              {/* Desktop-only volunteer button */}
+              {/* Desktop: Get Involved + Become a Sponsor */}
               <Link href="/volunteer" className="flex-1 hidden md:block">
-              <Button className="gap-1 w-full text-sm sm:text-base">
-                Get Involved <ArrowRight className="h-4 w-4" />
-              </Button>
+                <Button size="lg" className="w-full text-base gap-2">
+                  Get Involved <ArrowRight className="h-5 w-5" />
+                </Button>
               </Link>
 
-              {/* Desktop-only sponsor button */}
               <Link href="/sponsors" className="flex-1 hidden md:block">
-              <Button variant="outline" className="w-full text-sm sm:text-base">
-                Become a Sponsor
-              </Button>
+                <Button size="lg" variant="outline" className="w-full text-base">
+                  Become a Sponsor
+                </Button>
               </Link>
             </div>
-            </div>
 
-          {/* Hero carousel with auto-slide and loop */}
-          <div className="mx-auto w-full max-w-[500px] lg:max-w-[600px] xl:max-w-[770px] relative lg:order-last">
-            {/* Show single image before carousel is loaded */}
+            {/* Quick stats */}
+            <div className="flex gap-6 pt-4 border-t">
+              <div>
+                <div className="text-3xl font-bold text-primary">750+</div>
+                <div className="text-sm text-muted-foreground">Meals Monthly</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary">200+</div>
+                <div className="text-sm text-muted-foreground">Volunteers</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary">8000+</div>
+                <div className="text-sm text-muted-foreground">Lives Touched</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Hero carousel */}
+          <div className="w-full lg:order-last">
             {!carouselLoaded && (
               <div className="w-full">
                 <Image
                   src="/hero/hero1.webp"
                   width={800}
-                  height={550}
+                  height={600}
                   alt="Volunteers helping at a community event"
                   priority
-                  className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
+                  className="aspect-[4/3] overflow-hidden rounded-2xl object-cover object-center w-full shadow-xl"
                   quality={100}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
             )}
 
-            {/* Show carousel when ready */}
-            <div className={` ${carouselLoaded ? 'opacity-100' : 'opacity-0 h-0'}`}>
+            <div className={`${carouselLoaded ? 'opacity-100' : 'opacity-0 h-0'}`}>
               <Carousel
                 className="w-full"
                 opts={{
@@ -123,51 +134,46 @@ export default function HeroSection() {
                     <Image
                       src="/hero/hero1.webp"
                       width={800}
-                      height={550}
+                      height={600}
                       alt="Volunteers helping at a community event"
-                      className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
+                      className="aspect-[4/3] overflow-hidden rounded-2xl object-cover object-center w-full shadow-xl"
                       quality={100}
                       priority
-                      // sizes="(max-width: 768px) 33vw, (max-width: 1200px) 50vw, 100vw"
                     />
                   </CarouselItem>
                   <CarouselItem>
                     <Image
                       src="/hero/hero2.jpg"
                       width={800}
-                      height={550}
+                      height={600}
                       alt="Volunteers distributing meals"
-                      className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
-                      quality={80}
-                      // sizes="(max-width: 768px) 33vw, (max-width: 1200px) 50vw, 100vw"
+                      className="aspect-[4/3] overflow-hidden rounded-2xl object-cover object-center w-full shadow-xl"
+                      quality={90}
                     />
                   </CarouselItem>
-                  <CarouselItem>
+                  {/* <CarouselItem>
                     <Image
                       src="/hero/hero3.jpeg"
                       width={800}
-                      height={550}
+                      height={600}
                       alt="Community gathering"
-                      className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
-                      quality={80}
-                      loading="lazy"
-                      // sizes="(max-width: 768px) 33vw, (max-width: 1200px) 50vw, 100vw"
+                      className="aspect-[4/3] overflow-hidden rounded-2xl object-cover object-center w-full shadow-xl"
+                      quality={90}
                     />
-                  </CarouselItem>
+                  </CarouselItem> */}
                   <CarouselItem>
                     <Image
                       src="/hero/hero4.jpeg"
                       width={800}
-                      height={550}
-                      alt="Community gathering"
-                      className="aspect-video overflow-hidden rounded-xl object-cover object-center w-full"
-                      quality={80}
-                      // sizes="(max-width: 768px) 33vw, (max-width: 1200px) 50vw, 100vw"
+                      height={600}
+                      alt="Community support in action"
+                      className="aspect-[4/3] overflow-hidden rounded-2xl object-cover object-center w-full shadow-xl"
+                      quality={90}
                     />
                   </CarouselItem>
                 </CarouselContent>
-                <CarouselPrevious className={`lg:-left-10 left-2 z-10 transition-all duration-3000 ${carouselLoaded ? 'opacity-100' : 'opacity-0'}`} />
-                <CarouselNext className={`lg:-right-10 right-2 z-10 transition-all duration-3000 ${carouselLoaded ? 'opacity-100' : 'opacity-0'}`} />
+                <CarouselPrevious className="lg:-left-12 left-2" />
+                <CarouselNext className="lg:-right-12 right-2" />
               </Carousel>
             </div>
           </div>
