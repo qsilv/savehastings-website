@@ -98,12 +98,12 @@ export const executives = [
 
 export const impactStats = [
   {
-    number: "750+",
+    number: "350+",
     title: "Meals Monthly",
     description: "Nutritious meals prepared and served by our volunteers through mobile food services."
   },
   {
-    number: "200+",
+    number: "100+",
     title: "Active Volunteers",
     description: "Dedicated community members who donate their time and skills to support our mission."
   },
