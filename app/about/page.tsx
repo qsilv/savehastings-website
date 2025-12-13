@@ -56,14 +56,14 @@ export const cofounders = [
 ];
 
 export const executives = [
-  {
-    id: 4,
-    name: "Gurjaap Deol",
-    role: "Supply Manager",
-    linkedin: "https://linkedin.com/in/username",
-    instagram: "https://instagram.com/username",
-    image: "/team/gurjaap.jpg",
-  },
+  // {
+  //   id: 4,
+  //   name: "Gurjaap Deol",
+  //   role: "Supply Manager",
+  //   linkedin: "https://linkedin.com/in/username",
+  //   instagram: "https://instagram.com/username",
+  //   image: "/team/gurjaap.jpg",
+  // },
   {
     id: 2,
     name: "Monir Fathalla",
