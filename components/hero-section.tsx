@@ -90,11 +90,11 @@ export default function HeroSection() {
             {/* Quick stats */}
             <div className="flex gap-6 pt-4 border-t">
               <div>
-                <div className="text-3xl font-bold text-primary">750+</div>
+                <div className="text-3xl font-bold text-primary">350+</div>
                 <div className="text-sm text-muted-foreground">Meals Monthly</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary">200+</div>
+                <div className="text-3xl font-bold text-primary">100+</div>
                 <div className="text-sm text-muted-foreground">Volunteers</div>
               </div>
               <div>
