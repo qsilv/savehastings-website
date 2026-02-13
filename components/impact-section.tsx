@@ -33,7 +33,7 @@ export default function ImpactSection() {
             <div className="grid grid-cols-2 gap-4">
               <Card className="border-2 bg-card/60 backdrop-blur-sm">
                 <CardContent className="p-6 text-center space-y-2">
-                  <div className="text-4xl font-bold text-primary">750+</div>
+                  <div className="text-4xl font-bold text-primary">350+</div>
                   <div className="text-sm font-medium text-muted-foreground">Meals Monthly</div>
                 </CardContent>
               </Card>
