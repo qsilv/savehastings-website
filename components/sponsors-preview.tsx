@@ -18,20 +18,31 @@ export default function SponsorsPreview() {
             </Link>
           </Button>
         </div>
+      </div>
 
-        <ul className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-          {sponsors.map((sponsor) => (
-            <li key={sponsor.id} className="flex h-28 items-center justify-center rounded-2xl bg-white p-6 md:h-32">
-              <Image
-                src={sponsor.logo}
-                alt={sponsor.name}
-                width={180}
-                height={90}
-                className="max-h-full w-auto object-contain"
-              />
-            </li>
+      {/* Logos scroll on their own and pause on hover or keyboard focus. With
+          reduced motion the row stops and can be scrolled by hand. */}
+      <div className="logo-scroller mt-12" tabIndex={0} role="group" aria-label="Community partner logos">
+        <div className="logo-track">
+          {[false, true].map((duplicate) => (
+            <ul key={String(duplicate)} className="flex shrink-0" aria-hidden={duplicate || undefined}>
+              {sponsors.map((sponsor) => (
+                <li
+                  key={sponsor.id}
+                  className="mx-2 flex h-28 w-52 shrink-0 items-center justify-center rounded-2xl bg-white p-6 md:mx-3 md:h-32 md:w-60"
+                >
+                  <Image
+                    src={sponsor.logo}
+                    alt={duplicate ? "" : sponsor.name}
+                    width={180}
+                    height={90}
+                    className="max-h-full w-auto object-contain"
+                  />
+                </li>
+              ))}
+            </ul>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   )

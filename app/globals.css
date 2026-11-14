@@ -136,8 +136,36 @@
   }
 }
 
+@layer components {
+  /* Auto-scrolling partner logos */
+  .logo-scroller {
+    overflow: hidden;
+  }
+  .logo-track {
+    display: flex;
+    width: max-content;
+    animation: logo-scroll 45s linear infinite;
+  }
+  .logo-scroller:hover .logo-track,
+  .logo-scroller:focus-visible .logo-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes logo-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .logo-scroller {
+    overflow-x: auto;
+  }
+  .logo-track {
+    animation: none;
   }
 }
