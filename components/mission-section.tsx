@@ -12,7 +12,7 @@ export default function MissionSection() {
   return (
     <section className="py-20 md:py-28">
       <div className="container grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-        <div className="relative aspect-square overflow-hidden rounded-3xl">
+        <div className="relative order-2 aspect-[4/3] overflow-hidden rounded-3xl lg:order-1 lg:aspect-square">
           <Image
             src="/volunteer1.jpeg"
             alt="Three volunteers wearing #SAVEHASTINGS shirts"
@@ -22,7 +22,8 @@ export default function MissionSection() {
           />
         </div>
 
-        <div>
+        {/* On phones the text comes first, so the hero photos are not followed by another photo */}
+        <div className="order-1 lg:order-2">
           <SectionHeading title="Our mission">
             #SAVEHASTINGS supports people experiencing homelessness in Vancouver's Downtown Eastside. Volunteers run our
             events and hand out meals and supplies in person. We also advocate for the people we meet.
