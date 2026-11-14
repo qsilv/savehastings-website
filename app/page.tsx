@@ -3,7 +3,6 @@ import MissionSection from "@/components/mission-section"
 import ImpactSection from "@/components/impact-section"
 import WaysToHelpSection from "@/components/ways-to-help-section"
 import SponsorsPreview from "@/components/sponsors-preview"
-import PhotoGallery from "@/components/photo-gallery"
 import FinalCTASection from "@/components/final-cta-section"
 import { createMetadata } from '@/lib/metadata'
 
@@ -20,7 +19,6 @@ export default function HomePage() {
       <HeroSection />
       <MissionSection />
       <ImpactSection />
-      <PhotoGallery />
       <WaysToHelpSection />
       <SponsorsPreview />
       <FinalCTASection />
