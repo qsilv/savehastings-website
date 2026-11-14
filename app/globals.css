@@ -146,9 +146,15 @@
     width: max-content;
     animation: logo-scroll 45s linear infinite;
   }
-  .logo-scroller:hover .logo-track,
   .logo-scroller:focus-visible .logo-track {
     animation-play-state: paused;
+  }
+  /* Pause on hover only where a real pointer exists, so a tap on a phone
+     does not leave the row stuck. */
+  @media (hover: hover) {
+    .logo-scroller:hover .logo-track {
+      animation-play-state: paused;
+    }
   }
 }
 

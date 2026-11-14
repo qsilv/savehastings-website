@@ -20,7 +20,7 @@ export default function SponsorsPreview() {
         </div>
       </div>
 
-      {/* Logos scroll on their own and pause on hover or keyboard focus. With
+      {/* Logos scroll on their own and pause on mouse hover or keyboard focus. With
           reduced motion the row stops and can be scrolled by hand. */}
       <div className="logo-scroller mt-12" tabIndex={0} role="group" aria-label="Community partner logos">
         <div className="logo-track">
@@ -29,7 +29,7 @@ export default function SponsorsPreview() {
               {sponsors.map((sponsor) => (
                 <li
                   key={sponsor.id}
-                  className="mx-2 flex h-28 w-52 shrink-0 items-center justify-center rounded-2xl bg-white p-6 md:mx-3 md:h-32 md:w-60"
+                  className="mx-1.5 flex h-24 w-40 shrink-0 items-center justify-center rounded-2xl bg-white p-5 md:mx-3 md:h-32 md:w-60 md:p-6"
                 >
                   <Image
                     src={sponsor.logo}
