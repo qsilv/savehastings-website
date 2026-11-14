@@ -1,11 +1,11 @@
-import Link from "next/link"
 import Image from "next/image"
-import { ArrowLeft, ExternalLink, Mail } from "lucide-react"
-import { createMetadata } from '@/lib/metadata'
+import { ArrowUpRight, Check, Mail } from "lucide-react"
 
-
+import { createMetadata } from "@/lib/metadata"
+import { sponsors } from "@/lib/site-data"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import PageHero from "@/components/page-hero"
+import { Reveal } from "@/components/fx/reveal"
 
 export const metadata = createMetadata({
   title: 'Our Sponsors & Partnership Opportunities | #SAVEHASTINGS',
@@ -15,162 +15,101 @@ export const metadata = createMetadata({
   pagePath: '/sponsors'
 })
 
-export const sponsors = [
-  {
-    id: 1,
-    name: "Islamic Relief Canada",
-    logo: "/partners/islamicrelief.webp",
-    description: "Supporting humanitarian aid and development projects to help those in need.",
-    website: "https://islamicreliefcanada.org/",
-  },
-  {
-    id: 2,
-    name: "IDRF (International Development and Relief Foundation)",
-    logo: "/partners/idrf.webp",
-    description: "Providing effective humanitarian aid and sustainable development programs.",
-    website: "https://idrf.org/",
-  },
-  {
-    id: 3,
-    name: "House of Chicken",
-    logo: "/partners/house.jpg",
-    description: "Specializes in flavorful chicken dishes, including original chicken biryani, chicken karahi, chicken burgers, spicy wings, and wraps.",
-    website: "https://www.facebook.com/HouseOfChickenCanada/",
-  },
-  {
-    id: 4,
-    name: "Paragon Roofing",
-    logo: "/partners/paragon.webp",
-    description: "Roofing in BC, offering a large selection of roof repair, inspection, removal, reroof and roofing install services.",
-    website: "https://www.paragonroofingbc.ca/",
-  },
-  {
-    id: 5,
-    name: "Sabzi Mandi",
-    logo: "/partners/sabzi.png",
-    description: "Family-owned and operated premier grocery store chain in Canada.",
-    website: "https://sabzimandicanada.com/",
-  },
-  {
-    id: 6,
-    name: "Chicken World",
-    logo: "/partners/chickenworld.webp",
-    description: "Specialty fried chicken and burgers chain.",
-    website: "https://www.chickenworldcanada.com/",
-  },
-  {
-    id: 7,
-    name: "Global News",
-    logo: "/partners/globalnews.png",
-    description: "News and current affairs division of the Canadian Global Television Network.",
-    website: "https://globalnews.ca/",
-  },
-  {
-    id: 8,
-    name: "Save On Foods",
-    logo: "/partners/saveonfoods.png",
-    description: "Carrying more than 2,500 locally-made products from more than 2,000 local growers and producers.",
-    website: "https://www.saveonfoods.com/",
-  }
+const benefits = [
+  "Support essential services for those in need",
+  "Gain visibility in the community",
+  "Demonstrate your organization's commitment to social responsibility",
 ]
+
 export default function SponsorsPage() {
-
-
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
-      <div className="mb-10">
-        <Link href="/" className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground mb-6">
-          <ArrowLeft className="h-4 w-4" />
-          <span>Back to Home</span>
-        </Link>
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">Our Sponsors</h1>
-        <p className="max-w-[700px] text-muted-foreground md:text-xl">
-          We're grateful for the support of these organizations that make our work possible. Their contributions help us
-          make a meaningful impact in Vancouver's Downtown Eastside.
-        </p>
-      </div>
+    <>
+      <PageHero
+        eyebrow="Community partners"
+        title={
+          <>
+            Our <span className="text-primary">Sponsors</span>
+          </>
+        }
+      >
+        We're grateful for the support of these organizations that make our work possible. Their contributions help us
+        make a meaningful impact in Vancouver's Downtown Eastside.
+      </PageHero>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-12">
-        {sponsors.map((sponsor) => (
-          <Card key={sponsor.id} className="flex flex-col">
-            <CardHeader className="pb-4">
-              <div className="flex items-center justify-center h-24 mb-4 bg-muted rounded-md">
+      <section className="pb-24 md:pb-32">
+        <div className="container grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {sponsors.map((sponsor, i) => (
+            <Reveal key={sponsor.id} delay={0.05 * (i % 4)}>
+              <a
+                href={sponsor.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/60 hover:shadow-[0_25px_50px_-25px_hsl(var(--glow)/0.6)]"
+              >
+                <div className="m-2 flex h-36 items-center justify-center rounded-2xl bg-white p-7">
+                  <Image
+                    src={sponsor.logo}
+                    alt={`${sponsor.name} logo`}
+                    width={200}
+                    height={100}
+                    className="max-h-full w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-6 pt-4">
+                  <h2 className="font-display text-xl font-bold leading-tight">{sponsor.name}</h2>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{sponsor.description}</p>
+                  <span className="mt-6 flex items-center justify-between border-t pt-4 text-sm font-semibold text-primary">
+                    Visit Website
+                    <ArrowUpRight className="size-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  </span>
+                </div>
+              </a>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section id="become-sponsor" className="scroll-mt-24 px-3 pb-6 md:px-6">
+        <Reveal>
+          <div className="paper overflow-hidden rounded-[2rem] md:rounded-[3rem]">
+            <div className="grid items-stretch lg:grid-cols-2">
+              <div className="p-8 md:p-14">
+                <p className="eyebrow">Partner with us</p>
+                <h2 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Become a Sponsor</h2>
+                <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+                  Join our community of sponsors and help make a difference in the lives of those experiencing
+                  homelessness in Vancouver's Downtown Eastside. Reach out to help fund or provide food to a future
+                  event.
+                </p>
+                <ul className="mt-8 space-y-4">
+                  {benefits.map((b) => (
+                    <li key={b} className="flex items-start gap-3 text-lg">
+                      <span className="mt-1 flex size-6 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                        <Check className="size-3.5" strokeWidth={3} />
+                      </span>
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+                <Button asChild size="lg" className="mt-10">
+                  <a href="mailto:contact@savehastings.com">
+                    Contact Us <Mail />
+                  </a>
+                </Button>
+              </div>
+              <div className="relative min-h-[20rem]">
                 <Image
-                  src={sponsor.logo || "/placeholder.svg"}
-                  alt={sponsor.name}
-                  width={200}
-                  height={100}
-                  className="h-16 w-auto object-contain"
+                  src="/sponsor1.jpeg"
+                  alt="Partner with #SAVEHASTINGS"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
-              <CardTitle>{sponsor.name}</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-1">
-              <p className="text-muted-foreground">{sponsor.description}</p>
-            </CardContent>
-            <CardFooter>
-              <a href={sponsor.website} target="_blank" rel="noopener noreferrer" className="w-full">
-                <Button variant="outline" className="w-full gap-1">
-                  Visit Website <ExternalLink className="h-4 w-4" />
-                </Button>
-              </a>
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
-
-      <div id="become-sponsor" className="bg-muted rounded-lg p-6 md:p-10">
-        <div className="grid gap-6 md:grid-cols-2 items-center">
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Become a Sponsor</h2>
-            <p className="mb-4 text-muted-foreground">
-              Join our community of sponsors and help make a difference in the lives of those experiencing homelessness
-              in Vancouver's Downtown Eastside. Reach out to help fund or provide food to a future event.
-            </p>
-            <ul className="space-y-2 mb-6">
-              <li className="flex items-start gap-2">
-                <div className="rounded-full bg-primary/10 p-1 mt-0.5">
-                  <svg className="h-3 w-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span>Support essential services for those in need</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="rounded-full bg-primary/10 p-1 mt-0.5">
-                  <svg className="h-3 w-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span>Gain visibility in the community</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="rounded-full bg-primary/10 p-1 mt-0.5">
-                  <svg className="h-3 w-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span>Demonstrate your organization's commitment to social responsibility</span>
-              </li>
-            </ul>
-            <Button asChild className="gap-1">
-              <a href="mailto:contact@savehastings.com">
-                Contact Us <Mail className="h-4 w-4" />
-              </a>
-            </Button>
+            </div>
           </div>
-          <div className="bg-background rounded-lg p-6 flex items-center justify-center">
-            <Image
-              src="/sponsor1.jpeg?height=300&width=500&text=Partner With Us"
-              width={500}
-              height={300}
-              alt="Partner with #SAVEHASTINGS"
-              className="rounded-lg object-cover"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
+        </Reveal>
+      </section>
+    </>
   )
 }
-

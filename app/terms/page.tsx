@@ -18,7 +18,7 @@ export const metadata = createMetadata({
 
 export default function TermsOfServicePage() {
   return (
-    <div className="container px-4 md:px-6 py-12 md:py-20">
+    <div className="container pb-20 pt-32 md:pb-28 md:pt-40">
       <div className="max-w-3xl mx-auto space-y-10">
         <header className="space-y-3">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">Terms of Service</h1>

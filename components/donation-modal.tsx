@@ -82,57 +82,67 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
             <DialogContent className="sm:max-w-md md:max-w-lg max-h-[90vh] overflow-y-auto">        {step === "amount" ? (
                 <>
                     <DialogHeader>
-                        <DialogTitle className="flex items-center gap-2">
-                            <Heart className="h-5 w-5 text-primary" />
-                            Donate to <span className={goodDogFont.className}>#SAVEHASTINGS</span>
+                        <DialogTitle className="flex flex-wrap items-center gap-x-2 font-display text-2xl font-extrabold">
+                            <Heart className="h-5 w-5 fill-primary text-primary" />
+                            Donate to <span className={`${goodDogFont.className} text-3xl font-normal text-primary`}>#SAVEHASTINGS</span>
                         </DialogTitle>
-                        <DialogDescription>
+                        <DialogDescription className="text-base">
                             Your donation helps support the homeless population in Vancouver's Downtown Eastside.
                         </DialogDescription>
                     </DialogHeader>
 
-                    <div className="grid gap-6 py-4">
+                    <div className="grid gap-3 py-4">
                         <div className="grid grid-cols-3 gap-3">
-                            {predefinedAmounts.map((amt) => (
-                                <Button
-                                    key={amt}
-                                    variant={amount === amt && !isCustomAmount ? "default" : "outline"}
-                                    onClick={() => handleAmountSelect(amt)}
-                                    className="text-lg"
-                                >
-                                    ${amt}
-                                </Button>
-                            ))}
+                            {predefinedAmounts.map((amt) => {
+                                const selected = amount === amt && !isCustomAmount
+                                return (
+                                    <button
+                                        key={amt}
+                                        type="button"
+                                        aria-pressed={selected}
+                                        onClick={() => handleAmountSelect(amt)}
+                                        className={`rounded-2xl border py-5 font-display text-3xl font-extrabold transition-all active:scale-95 ${selected
+                                            ? "border-primary bg-primary text-primary-foreground shadow-glow"
+                                            : "bg-foreground/[0.04] hover:border-primary hover:text-primary"
+                                            }`}
+                                    >
+                                        ${amt}
+                                    </button>
+                                )
+                            })}
                         </div>
 
-                        <div className="flex flex-col gap-2">
-                            <Button
-                                variant={isCustomAmount ? "default" : "outline"}
-                                onClick={() => {
-                                    setIsCustomAmount(true)
-                                    setAmount("")
-                                }}
-                                className="text-lg"
-                            >
-                                Custom Amount
-                            </Button>
+                        <button
+                            type="button"
+                            aria-pressed={isCustomAmount}
+                            onClick={() => {
+                                setIsCustomAmount(true)
+                                setAmount("")
+                            }}
+                            className={`rounded-2xl border py-3 text-base font-semibold transition-colors ${isCustomAmount
+                                ? "border-primary text-primary"
+                                : "bg-foreground/[0.04] hover:border-primary hover:text-primary"
+                                }`}
+                        >
+                            Custom Amount
+                        </button>
 
-                            {isCustomAmount && (
-                                <div className="flex items-center mt-2">
-                                    <span className="text-lg mr-2">$</span>
-                                    <Input
-                                        type="number"
-                                        min="1"
-                                        step="any"
-                                        value={amount}
-                                        onChange={handleCustomAmountChange}
-                                        placeholder="Enter amount"
-                                        className="text-lg"
-                                        autoFocus
-                                    />
-                                </div>
-                            )}
-                        </div>
+                        {isCustomAmount && (
+                            <div className="relative">
+                                <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-lg font-semibold text-muted-foreground">$</span>
+                                <Input
+                                    type="number"
+                                    min="1"
+                                    step="any"
+                                    value={amount}
+                                    onChange={handleCustomAmountChange}
+                                    placeholder="Enter amount"
+                                    aria-label="Custom donation amount in dollars"
+                                    className="h-14 pl-9 text-lg md:text-lg"
+                                    autoFocus
+                                />
+                            </div>
+                        )}
                     </div>
 
                     <DialogFooter>
@@ -140,6 +150,7 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
                             onClick={handleContinue}
                             disabled={amount === "" || Number(amount) <= 0 || isLoading}
                             className="w-full"
+                            size="lg"
                         >
                             {isLoading ? (
                                 <>
@@ -163,7 +174,7 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
 
                     <div className="py-4">
                         {clientSecret && (
-                            <div className="h-[60vh] md:h-[65vh]">
+                            <div className="h-[60vh] overflow-y-auto rounded-2xl bg-white md:h-[65vh]">
                                 <EmbeddedCheckoutProvider stripe={stripePromise} options={{ clientSecret }}>
                                     <EmbeddedCheckout />
                                 </EmbeddedCheckoutProvider>

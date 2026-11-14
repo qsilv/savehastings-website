@@ -1,8 +1,10 @@
-import { createMetadata } from '@/lib/metadata'
-import { ArrowLeft, Clock, MapPin } from "lucide-react"
-import Link from "next/link"
 import Image from "next/image"
+import { Clock, MapPin } from "lucide-react"
+
+import { createMetadata } from "@/lib/metadata"
 import VolunteerForm from "@/components/volunteer-form"
+import PageHero from "@/components/page-hero"
+import { Reveal } from "@/components/fx/reveal"
 
 export const metadata = createMetadata({
   title: 'Volunteer with #SAVEHASTINGS | Make an Impact in Vancouver\'s DTES',
@@ -12,71 +14,79 @@ export const metadata = createMetadata({
   pagePath: '/volunteer'
 })
 
+const perks = [
+  {
+    icon: Clock,
+    title: "Flexible Scheduling",
+    text: "We work with your availability to find volunteer opportunities that fit your schedule.",
+  },
+  {
+    icon: MapPin,
+    title: "Community Impact",
+    text: "See firsthand the positive change your contribution makes in our community.",
+  },
+]
+
 export default function VolunteerPage() {
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
-      <div className="mb-10">
-        <Link href="/" className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground mb-6">
-          <ArrowLeft className="h-4 w-4" />
-          <span>Back to Home</span>
-        </Link>
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">Volunteer With Us</h1>
-        <p className="max-w-[700px] text-muted-foreground md:text-xl">
-          Join our team of dedicated volunteers making a difference in Vancouver's Downtown Eastside. Your time and
-          skills can help transform lives.
-        </p>
-      </div>
+    <>
+      <PageHero
+        eyebrow="Join the crew"
+        title={
+          <>
+            Volunteer <span className="text-primary">With Us</span>
+          </>
+        }
+      >
+        Join our team of dedicated volunteers making a difference in Vancouver's Downtown Eastside. Your time and skills
+        can help transform lives.
+      </PageHero>
 
-      <div className="grid gap-10 lg:grid-cols-2 mb-16">
-        <div>
-          <h2 className="text-2xl font-bold mb-6">Volunteer Registration</h2>
-          <VolunteerForm />
-        </div>
+      <section className="pb-24 md:pb-32">
+        <div className="container grid items-start gap-8 lg:grid-cols-[1.15fr_1fr] lg:gap-12">
+          <Reveal>
+            <h2 className="mb-6 text-3xl font-extrabold tracking-tight">Volunteer Registration</h2>
+            <VolunteerForm />
+          </Reveal>
 
-        <div className="bg-muted rounded-lg p-6 md:p-10">
-          <div className="space-y-6">
-            <h2 className="text-2xl font-bold mb-4">Make an Impact</h2>
-            <p className="mb-6 text-muted-foreground">
-              When you join our volunteer team, you'll become part of a compassionate community dedicated to making a
-              difference. All positions require a commitment of 4-5 hours bi-weekly.
-            </p>
-            <ul className="space-y-4">
-              <li className="flex gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                  <Clock className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-medium">Flexible Scheduling</h3>
-                  <p className="text-muted-foreground">
-                    We work with your availability to find volunteer opportunities that fit your schedule.
-                  </p>
-                </div>
-              </li>
-              <li className="flex gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                  <MapPin className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-medium">Community Impact</h3>
-                  <p className="text-muted-foreground">
-                    See firsthand the positive change your contribution makes in our community.
-                  </p>
-                </div>
-              </li>
-            </ul>
-            <div className="mt-6">
-              <Image
-                src="/volunteer1.jpeg?height=300&width=500&text=Make an Impact"
-                width={500}
-                height={300}
-                alt="Volunteers making an impact"
-                className="rounded-lg object-cover mt-4"
-              />
+          <Reveal delay={0.1} className="lg:sticky lg:top-28">
+            <div className="paper overflow-hidden rounded-3xl">
+              <div className="relative aspect-[5/4]">
+                <Image
+                  src="/volunteer1.jpeg"
+                  alt="Volunteers making an impact"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className="object-cover object-top"
+                />
+                <p className="absolute bottom-4 left-4 -rotate-2 rounded-xl bg-primary px-4 py-2 font-marker text-2xl leading-none text-primary-foreground shadow-lg">
+                  4-5 hours, bi-weekly
+                </p>
+              </div>
+              <div className="p-7 md:p-9">
+                <h2 className="text-3xl font-extrabold tracking-tight">Make an Impact</h2>
+                <p className="mt-4 leading-relaxed text-muted-foreground">
+                  When you join our volunteer team, you'll become part of a compassionate community dedicated to making
+                  a difference. All positions require a commitment of 4-5 hours bi-weekly.
+                </p>
+                <ul className="mt-7 space-y-5">
+                  {perks.map(({ icon: Icon, title, text }) => (
+                    <li key={title} className="flex gap-4">
+                      <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-primary">
+                        <Icon className="size-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-sans text-lg font-bold">{title}</h3>
+                        <p className="text-muted-foreground">{text}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
+          </Reveal>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   )
 }
-

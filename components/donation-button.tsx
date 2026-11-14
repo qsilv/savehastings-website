@@ -9,16 +9,22 @@ interface DonationButtonProps {
   className?: string
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link"
   size?: "default" | "sm" | "lg" | "icon"
+  label?: string
 }
 
-export default function DonationButton({ className, variant = "default", size = "default" }: DonationButtonProps) {
+export default function DonationButton({
+  className,
+  variant = "default",
+  size = "default",
+  label = "Donate Now",
+}: DonationButtonProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
     <>
       <Button onClick={() => setIsModalOpen(true)} className={className} variant={variant} size={size}>
-        <Heart className="h-4 w-4" />
-        Donate Now
+        <Heart className="fill-current" />
+        {label}
       </Button>
 
       <DonationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

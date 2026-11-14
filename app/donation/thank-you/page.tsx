@@ -23,7 +23,7 @@ export default async function ThankYouPage({ searchParams }: { searchParams: { s
   const amount = session.amount_total ? (session.amount_total / 100).toFixed(2) : "0.00"
 
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
+    <div className="container pb-20 pt-28 md:pb-28 md:pt-36">
       <div className="mb-10">
         <Link href="/" className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground mb-6">
           <ArrowLeft className="h-4 w-4" />

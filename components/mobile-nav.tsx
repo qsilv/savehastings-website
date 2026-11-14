@@ -2,108 +2,67 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { usePathname } from "next/navigation"
+import { ArrowUpRight, Menu } from "lucide-react"
 
+import { cn } from "@/lib/utils"
+import { navLinks, socials } from "@/lib/site-data"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import DonationButton from "@/components/donation-button"
-import { goodDogFont } from "@/components/ui/fonts"
 
-
-/**
- * MobileNav Component
- *
- * Provides a responsive mobile navigation menu that slides in from the left side of the screen.
- * This component is only visible on mobile devices and provides access to the main navigation links.
- *
- * Features:
- * - Hamburger menu toggle button
- * - Slide-in navigation panel
- * - Auto-close on link selection
- */
+/** Full-height mobile menu with oversized links. Closes itself on navigation. */
 export default function MobileNav() {
-  // State to track whether the mobile menu is open or closed
   const [open, setOpen] = useState(false)
-
-  /**
-   * Handles click events on navigation links
-   * Automatically closes the mobile menu when a link is clicked
-   */
-  const handleLinkClick = () => {
-    setOpen(false)
-  }
+  const pathname = usePathname()
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      {/* Hamburger menu button - only visible on mobile */}
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setOpen(true)}>
-          <Menu className="h-6 w-6" />
-          <span className="sr-only">Toggle menu</span>
+        <Button variant="ghost" size="icon" className="md:hidden">
+          <Menu className="!size-5" />
+          <span className="sr-only">Open menu</span>
         </Button>
       </SheetTrigger>
 
-      {/* Slide-in navigation panel */}
-      <SheetContent side="left" className="z-50 w-[300px] sm:w-[400px]">
-      <SheetTitle className="sr-only">Mobile Navigation</SheetTitle>
-        <div className="flex flex-col gap-6 py-6">
-          {/* Header with logo and close button */}
-          <div className="flex items-center justify-between mb-4">
-            <Link href="/" className="flex items-center gap-2 font-bold text-xl" onClick={handleLinkClick}>
-              <span className={goodDogFont.className}>#SAVEHASTINGS</span>
-            </Link>
-            <Button variant="ghost" size="icon" onClick={() => setOpen(false)}>
-              <X className="h-6 w-6" />
-              <span className="sr-only">Close menu</span>
-            </Button>
-          </div>
+      <SheetContent side="right" className="flex w-full flex-col border-l-0 bg-background p-6 sm:max-w-md">
+        <SheetTitle className="font-marker text-3xl font-normal text-primary">#SAVEHASTINGS</SheetTitle>
+        <SheetDescription className="sr-only">Site navigation</SheetDescription>
 
-          {/* Navigation links */}
-          <nav className="flex flex-col space-y-4">
-            <Link
-              href="/"
-              className="text-lg font-medium transition-colors hover:text-primary py-2 border-b border-border"
-              onClick={handleLinkClick}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="text-lg font-medium transition-colors hover:text-primary py-2 border-b border-border"
-              onClick={handleLinkClick}
-            >
-              About
-            </Link>
-            {/* <Link
-              href="/events"
-              className="text-lg font-medium transition-colors hover:text-primary py-2 border-b border-border"
-              onClick={handleLinkClick}
-            >
-              Events
-            </Link> */}
-            <Link
-              href="/volunteer"
-              className="text-lg font-medium transition-colors hover:text-primary py-2 border-b border-border"
-              onClick={handleLinkClick}
-            >
-              Volunteer
-            </Link>
-            <Link
-              href="/sponsors"
-              className="text-lg font-medium transition-colors hover:text-primary py-2 border-b border-border"
-              onClick={handleLinkClick}
-            >
-              Sponsors
-            </Link>
-          </nav>
+        <nav className="mt-8 flex flex-col" aria-label="Mobile">
+          {navLinks.map((link, i) => {
+            const active = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href)
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "group flex items-baseline justify-between border-b py-5 font-display text-4xl font-extrabold tracking-tight transition-colors",
+                  active ? "text-primary" : "text-foreground hover:text-primary",
+                )}
+              >
+                <span>
+                  <span className="mr-3 align-middle font-sans text-xs font-medium text-muted-foreground">
+                    0{i + 1}
+                  </span>
+                  {link.label}
+                </span>
+                <ArrowUpRight className="size-6 opacity-40 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
+              </Link>
+            )
+          })}
+        </nav>
 
-          {/* Call-to-action button */}
-            <div className="mt-6">
-            <DonationButton className="w-full" />
-          </div>
+        <div className="mt-auto space-y-4 pt-8">
+          <DonationButton className="w-full" size="lg" />
+          <p className="text-center text-sm text-muted-foreground">
+            <a href={`mailto:${socials.email}`} className="hover:text-foreground">
+              {socials.email}
+            </a>
+          </p>
         </div>
       </SheetContent>
     </Sheet>
   )
 }
-

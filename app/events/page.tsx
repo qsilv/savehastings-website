@@ -181,7 +181,7 @@ export default function EventsPage() {
   ]
 
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
+    <div className="container pb-20 pt-28 md:pb-28 md:pt-36">
       {/* Page header */}
       <div className="mb-10">
         <Link href="/" className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground mb-6">
