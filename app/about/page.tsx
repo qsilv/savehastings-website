@@ -3,11 +3,10 @@ import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { TeamMemberCard } from "@/components/team-member-card"
 import PageHero from "@/components/page-hero"
 import { SectionHeading } from "@/components/section-heading"
-import { cofounders, executives, impactStats } from "@/lib/site-data"
+import { impactStats, team } from "@/lib/site-data"
 import { createMetadata } from "@/lib/metadata"
 
 export const metadata = createMetadata({
@@ -33,8 +32,7 @@ const joinWays = [
   { title: "Attend an event", text: "Come to a community event or fundraiser." },
 ]
 
-const tabClass =
-  "h-full rounded-full px-5 text-sm font-semibold data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+const sortedTeam = [...team].sort((a, b) => a.name.localeCompare(b.name))
 
 export default function AboutPage() {
   return (
@@ -134,35 +132,14 @@ export default function AboutPage() {
       {/* Team */}
       <section className="pb-20 md:pb-28">
         <div className="container">
-          <Tabs defaultValue="cofounders" className="w-full">
-            <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-              <SectionHeading title="Our team" />
-              <TabsList className="h-12 self-start rounded-full border bg-card p-1 sm:self-auto">
-                <TabsTrigger value="cofounders" className={tabClass}>
-                  Directors
-                </TabsTrigger>
-                <TabsTrigger value="executives" className={tabClass}>
-                  Executives
-                </TabsTrigger>
-              </TabsList>
-            </div>
-
-            <TabsContent value="cofounders" className="mt-10">
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {cofounders.map((member) => (
-                  <TeamMemberCard key={member.id} member={member} size="large" />
-                ))}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="executives" className="mt-10">
-              <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-                {executives.map((member) => (
-                  <TeamMemberCard key={member.id} member={member} size="small" />
-                ))}
-              </div>
-            </TabsContent>
-          </Tabs>
+          <SectionHeading title="Our team" />
+          <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {sortedTeam.map((member) => (
+              <li key={member.name}>
+                <TeamMemberCard member={member} />
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

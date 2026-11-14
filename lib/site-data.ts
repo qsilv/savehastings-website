@@ -71,55 +71,47 @@ export const sponsors = [
 ]
 
 export interface TeamMember {
-  id: number
   name: string
   role: string
-  linkedin: string
-  instagram: string
   image: string
+  linkedin?: string
+  instagram?: string
 }
 
-export const cofounders: TeamMember[] = [
+// One list for the whole team. To add someone, add an entry here and put
+// their photo in public/team/. The About page sorts the list by name.
+export const team: TeamMember[] = [
   {
-    id: 1,
     name: "Sumit Virdi",
     role: "Co-Founder",
+    image: "/team/sumit.jpg",
     linkedin: "https://www.linkedin.com/in/sumit-s-virdi-a0342720a/",
     instagram: "https://www.instagram.com/s_virdi66",
-    image: "/team/sumit.jpg",
   },
   {
-    id: 2,
     name: "Cody Zhu",
     role: "Co-Founder",
+    image: "/team/cody.png",
     linkedin: "https://www.linkedin.com/in/cody-zhu-2193aa217/",
     instagram: "https://www.instagram.com/_z.cody",
-    image: "/team/cody.png",
   },
   {
-    id: 3,
     name: "Suhaib Al-Nakshabandi",
     role: "Co-Founder",
+    image: "/team/suhaib.jpg",
     linkedin: "https://www.linkedin.com/in/suhaib-al-nakshabandi-7274b21b9/",
     instagram: "https://www.instagram.com/suhaib.nak",
-    image: "/team/suhaib.jpg",
   },
   {
-    id: 4,
     name: "Faisal Al-Nakshabandi",
     role: "Co-Founder",
-    linkedin: "https://www.instagram.com/fasooliah",
-    instagram: "https://www.instagram.com/fasooliah",
     image: "/team/faisal.jpg",
+    instagram: "https://www.instagram.com/fasooliah",
   },
-]
-
-// Executives have no public social links yet, so their cards show none.
-export const executives: TeamMember[] = [
-  { id: 2, name: "Monir Fathalla", role: "Operations & Strategy", linkedin: "", instagram: "", image: "/team/monir.png" },
-  { id: 6, name: "William Zhu", role: "Fundraising", linkedin: "", instagram: "", image: "/team/william.jpg" },
-  { id: 8, name: "Mazen Khalil", role: "On-Site Leader", linkedin: "", instagram: "", image: "/team/mazen.jpeg" },
-  { id: 9, name: "Nour M.", role: "Digital Content", linkedin: "", instagram: "", image: "/team/nour.png" },
+  { name: "Monir Fathalla", role: "Operations & Strategy", image: "/team/monir.png" },
+  { name: "William Zhu", role: "Fundraising", image: "/team/william.jpg" },
+  { name: "Mazen Khalil", role: "On-Site Leader", image: "/team/mazen.jpeg" },
+  { name: "Nour M.", role: "Digital Content", image: "/team/nour.png" },
 ]
 
 export const impactStats = [
