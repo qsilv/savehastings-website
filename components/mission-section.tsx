@@ -12,7 +12,7 @@ export default function MissionSection() {
   return (
     <section className="py-20 md:py-28">
       <div className="container grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-        <figure className="relative aspect-square overflow-hidden rounded-3xl">
+        <div className="relative aspect-square overflow-hidden rounded-3xl">
           <Image
             src="/volunteer1.jpeg"
             alt="Three volunteers wearing #SAVEHASTINGS shirts"
@@ -20,10 +20,7 @@ export default function MissionSection() {
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover object-top"
           />
-          <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6 pt-24 font-marker text-4xl leading-none text-white sm:text-5xl">
-            Unleash your heroic heart
-          </figcaption>
-        </figure>
+        </div>
 
         <div>
           <SectionHeading title="Our mission">

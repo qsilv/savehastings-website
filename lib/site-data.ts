@@ -140,21 +140,20 @@ export const impactStats = [
 export interface Photo {
   src: string
   alt: string
-  caption: string
   /** tailwind aspect class used in the gallery wall */
   aspect: string
 }
 
 // Outreach photos shown in the home page gallery.
 export const photos: Photo[] = [
-  { src: "/hero/hero2.jpg", alt: "Volunteers distributing meals at night", caption: "Serving dinner on East Hastings", aspect: "aspect-[4/3]" },
-  { src: "/about1.png", alt: "Volunteers gathering before an outreach night", caption: "Volunteers before an outreach night", aspect: "aspect-[4/5]" },
-  { src: "/hero/hero3.jpeg", alt: "A volunteer and a community member sharing a meal and a smile", caption: "Sharing pizza", aspect: "aspect-[4/3]" },
-  { src: "/impact.png", alt: "Volunteers handing out pizza on the street", caption: "Handing out pizza", aspect: "aspect-[16/9]" },
-  { src: "/about2.jpeg", alt: "A community member giving a thumbs up with a meal", caption: "Thumbs up", aspect: "aspect-square" },
-  { src: "/hero/hero4.jpeg", alt: "Volunteers sorting warm clothing", caption: "Sorting clothes", aspect: "aspect-[4/3]" },
-  { src: "/hero/hero1.webp", alt: "Volunteers setting up at a community event", caption: "Setting up", aspect: "aspect-[16/9]" },
-  { src: "/sponsor1.jpeg", alt: "Partner volunteers serving food at night", caption: "IDRF volunteers serving food", aspect: "aspect-[4/3]" },
-  { src: "/tempabout1.jpeg", alt: "The volunteer team together after an outreach night", caption: "The team after an outreach night", aspect: "aspect-[4/3]" },
-  { src: "/volunteer1.jpeg", alt: "Three volunteers in #SAVEHASTINGS shirts", caption: "Volunteers in our shirts", aspect: "aspect-square" },
+  { src: "/hero/hero2.jpg", alt: "Volunteers distributing meals at night", aspect: "aspect-[4/3]" },
+  { src: "/about1.png", alt: "Volunteers gathering before an outreach night", aspect: "aspect-[4/5]" },
+  { src: "/hero/hero3.jpeg", alt: "A volunteer and a community member sharing a meal and a smile", aspect: "aspect-[4/3]" },
+  { src: "/impact.png", alt: "Volunteers handing out pizza on the street", aspect: "aspect-[16/9]" },
+  { src: "/about2.jpeg", alt: "A community member giving a thumbs up with a meal", aspect: "aspect-square" },
+  { src: "/hero/hero4.jpeg", alt: "Volunteers sorting warm clothing", aspect: "aspect-[4/3]" },
+  { src: "/hero/hero1.webp", alt: "Volunteers setting up at a community event", aspect: "aspect-[16/9]" },
+  { src: "/sponsor1.jpeg", alt: "Partner volunteers serving food at night", aspect: "aspect-[4/3]" },
+  { src: "/tempabout1.jpeg", alt: "The volunteer team together after an outreach night", aspect: "aspect-[4/3]" },
+  { src: "/volunteer1.jpeg", alt: "Three volunteers in #SAVEHASTINGS shirts", aspect: "aspect-square" },
 ]

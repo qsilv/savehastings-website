@@ -41,7 +41,7 @@ export default function PhotoGallery() {
                 type="button"
                 onClick={() => setOpen(i)}
                 className={`group relative block w-full overflow-hidden rounded-2xl border bg-card ${photo.aspect}`}
-                aria-label={`Open photo: ${photo.caption}`}
+                aria-label={`Open photo: ${photo.alt}`}
               >
                 <Image
                   src={photo.src}
@@ -50,10 +50,6 @@ export default function PhotoGallery() {
                   sizes="(max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <span className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-70 transition-opacity group-hover:opacity-100" />
-                <span className="absolute bottom-2.5 left-3 right-3 sm:bottom-3 sm:left-4 sm:right-12 text-left font-marker text-lg leading-tight text-white sm:text-2xl">
-                  {photo.caption}
-                </span>
                 <span className="absolute bottom-3 right-3 flex size-8 items-center justify-center rounded-full bg-black/60 text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
                   <Expand className="size-4" />
                 </span>
@@ -67,7 +63,7 @@ export default function PhotoGallery() {
         <DialogContent className="max-w-4xl gap-3 border-white/10 bg-black p-3 sm:p-4">
           {current && (
             <>
-              <DialogTitle className="pl-1 pr-10 font-marker text-2xl font-normal text-white">{current.caption}</DialogTitle>
+              <DialogTitle className="sr-only">Photo {(open ?? 0) + 1} of {n}</DialogTitle>
               <DialogDescription className="sr-only">{current.alt}</DialogDescription>
               <div className="relative h-[68vh] overflow-hidden rounded-2xl">
                 <Image src={current.src} alt={current.alt} fill sizes="100vw" className="object-contain" />
