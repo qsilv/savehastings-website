@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/react"
 export const metadata = {
   title: "#SAVEHASTINGS - Supporting Vancouver's Downtown Eastside",
   description:
-    "Join our community of volunteers dedicated to making a meaningful impact in the lives of those experiencing homelessness. Help us Save Hastings!",
+    "A youth-led volunteer group bringing meals and supplies to people experiencing homelessness in Vancouver's Downtown Eastside.",
   keywords: [
     "SAVEHASTINGS",
     "save hastings",

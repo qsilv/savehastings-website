@@ -39,10 +39,9 @@ export default async function ThankYouPage({ searchParams }: { searchParams: { s
                 <CheckCircle2 className="h-10 w-10 text-primary" />
               </div>
             </div>
-            <CardTitle className="text-center">Thank You for Your Donation!</CardTitle>
+            <CardTitle className="text-center">Thank you for your donation</CardTitle>
             <CardDescription className="text-center">
-              Your generous donation of ${amount} will help support the homeless population in Vancouver's Downtown
-              Eastside.
+              Your donation of ${amount} supports people experiencing homelessness in Vancouver's Downtown Eastside.
             </CardDescription>
           </CardHeader>
           {/* <CardContent className="space-y-4">

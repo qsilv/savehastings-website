@@ -5,7 +5,6 @@ import { createMetadata } from "@/lib/metadata"
 import { sponsors } from "@/lib/site-data"
 import { Button } from "@/components/ui/button"
 import PageHero from "@/components/page-hero"
-import { Reveal } from "@/components/fx/reveal"
 
 export const metadata = createMetadata({
   title: 'Our Sponsors & Partnership Opportunities | #SAVEHASTINGS',
@@ -16,35 +15,29 @@ export const metadata = createMetadata({
 })
 
 const benefits = [
-  "Support essential services for those in need",
+  "Support services for people in need",
   "Gain visibility in the community",
-  "Demonstrate your organization's commitment to social responsibility",
+  "Show your organization's commitment to social responsibility",
 ]
 
 export default function SponsorsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Community partners"
-        title={
-          <>
-            Our <span className="text-primary">Sponsors</span>
-          </>
-        }
+        title="Our sponsors"
       >
-        We're grateful for the support of these organizations that make our work possible. Their contributions help us
-        make a meaningful impact in Vancouver's Downtown Eastside.
+        These organizations support our work in Vancouver's Downtown Eastside. Thank you.
       </PageHero>
 
       <section className="pb-24 md:pb-32">
         <div className="container grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {sponsors.map((sponsor, i) => (
-            <Reveal key={sponsor.id} delay={0.05 * (i % 4)}>
+            <div key={sponsor.id}>
               <a
                 href={sponsor.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex h-full flex-col overflow-hidden rounded-3xl border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/60 hover:shadow-[0_25px_50px_-25px_hsl(var(--glow)/0.6)]"
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border bg-card transition-all duration-300 hover:border-primary"
               >
                 <div className="m-2 flex h-36 items-center justify-center rounded-2xl bg-white p-7">
                   <Image
@@ -64,22 +57,19 @@ export default function SponsorsPage() {
                   </span>
                 </div>
               </a>
-            </Reveal>
+            </div>
           ))}
         </div>
       </section>
 
       <section id="become-sponsor" className="scroll-mt-24 px-3 pb-6 md:px-6">
-        <Reveal>
-          <div className="paper overflow-hidden rounded-[2rem] md:rounded-[3rem]">
+        <div>
+          <div className="paper overflow-hidden rounded-3xl">
             <div className="grid items-stretch lg:grid-cols-2">
               <div className="p-8 md:p-14">
-                <p className="eyebrow">Partner with us</p>
-                <h2 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Become a Sponsor</h2>
+                <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Become a sponsor</h2>
                 <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                  Join our community of sponsors and help make a difference in the lives of those experiencing
-                  homelessness in Vancouver's Downtown Eastside. Reach out to help fund or provide food to a future
-                  event.
+                  Sponsors fund our events or provide the food we serve. Email us to support a future event.
                 </p>
                 <ul className="mt-8 space-y-4">
                   {benefits.map((b) => (
@@ -108,7 +98,7 @@ export default function SponsorsPage() {
               </div>
             </div>
           </div>
-        </Reveal>
+        </div>
       </section>
     </>
   )

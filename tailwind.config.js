@@ -61,7 +61,6 @@ module.exports = {
         sm: "calc(var(--radius) - 8px)",
       },
       boxShadow: {
-        glow: "0 0 0 1px hsl(var(--glow) / 0.35), 0 10px 40px -8px hsl(var(--glow) / 0.55)",
         photo: "0 30px 60px -20px rgb(0 0 0 / 0.75), 0 0 0 1px rgb(255 255 255 / 0.06)",
       },
       keyframes: {
@@ -77,7 +76,6 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "float-slow": "float-slow 7s ease-in-out infinite",
       },
     },
   },

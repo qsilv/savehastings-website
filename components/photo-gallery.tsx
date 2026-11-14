@@ -7,9 +7,8 @@ import { ChevronLeft, ChevronRight, Expand } from "lucide-react"
 import { photos } from "@/lib/site-data"
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog"
 import { SectionHeading } from "@/components/section-heading"
-import { Reveal } from "@/components/fx/reveal"
 
-/** Masonry wall of every street photo, with a keyboard-friendly lightbox. */
+/** Masonry wall of the outreach photos, with a keyboard-friendly lightbox. */
 export default function PhotoGallery() {
   const [open, setOpen] = useState<number | null>(null)
   const n = photos.length
@@ -29,16 +28,15 @@ export default function PhotoGallery() {
   const current = open === null ? null : photos[open]
 
   return (
-    <section className="relative overflow-hidden py-24 md:py-32">
-      <div aria-hidden className="streetlight left-1/2 top-0 h-72 w-[44rem] -translate-x-1/2 opacity-25" />
-      <div className="container relative">
-        <SectionHeading eyebrow="On the street" title={<>Nights on <span className="font-marker font-normal neon">Hastings</span></>}>
-          No stock photos. Just our volunteers, our neighbours, and the block we keep coming back to.
+    <section className="py-20 md:py-28">
+      <div className="container">
+        <SectionHeading title="Nights on Hastings">
+          Photos from our bi-weekly outreach nights on East Hastings Street.
         </SectionHeading>
 
         <div className="mt-14 columns-2 gap-3 sm:gap-4 lg:columns-3">
           {photos.map((photo, i) => (
-            <Reveal key={photo.src} delay={0.04 * (i % 3)} className="mb-3 break-inside-avoid sm:mb-4">
+            <div key={photo.src} className="mb-3 break-inside-avoid sm:mb-4">
               <button
                 type="button"
                 onClick={() => setOpen(i)}
@@ -56,11 +54,11 @@ export default function PhotoGallery() {
                 <span className="absolute bottom-2.5 left-3 right-3 sm:bottom-3 sm:left-4 sm:right-12 text-left font-marker text-lg leading-tight text-white sm:text-2xl">
                   {photo.caption}
                 </span>
-                <span className="absolute bottom-3 right-3 flex size-8 items-center justify-center rounded-full bg-white/15 text-white opacity-0 backdrop-blur transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+                <span className="absolute bottom-3 right-3 flex size-8 items-center justify-center rounded-full bg-black/60 text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
                   <Expand className="size-4" />
                 </span>
               </button>
-            </Reveal>
+            </div>
           ))}
         </div>
       </div>
@@ -77,7 +75,7 @@ export default function PhotoGallery() {
                   type="button"
                   onClick={() => step(-1)}
                   aria-label="Previous photo"
-                  className="absolute left-2 top-1/2 flex size-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur hover:bg-primary hover:text-primary-foreground"
+                  className="absolute left-2 top-1/2 flex size-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-white hover:bg-primary hover:text-primary-foreground"
                 >
                   <ChevronLeft className="size-5" />
                 </button>
@@ -85,7 +83,7 @@ export default function PhotoGallery() {
                   type="button"
                   onClick={() => step(1)}
                   aria-label="Next photo"
-                  className="absolute right-2 top-1/2 flex size-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur hover:bg-primary hover:text-primary-foreground"
+                  className="absolute right-2 top-1/2 flex size-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-white hover:bg-primary hover:text-primary-foreground"
                 >
                   <ChevronRight className="size-5" />
                 </button>

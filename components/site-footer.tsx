@@ -7,10 +7,8 @@ import { InstagramIcon, LinkedInIcon } from "@/components/icons"
 
 export default function SiteFooter() {
   return (
-    <footer className="relative overflow-hidden border-t bg-card">
-      <div aria-hidden className="streetlight -top-40 left-1/2 h-80 w-[40rem] -translate-x-1/2 opacity-40" />
-
-      <div className="container relative pt-16 md:pt-20">
+    <footer className="border-t bg-card">
+      <div className="container pt-16 md:pt-20">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
@@ -18,8 +16,8 @@ export default function SiteFooter() {
               <span className="font-marker text-3xl leading-none">#SAVEHASTINGS</span>
             </Link>
             <p className="mt-5 max-w-sm leading-relaxed text-muted-foreground">
-              Supporting the homeless population in Vancouver's Downtown Eastside through community-driven
-              initiatives.
+              A youth-led volunteer group supporting people experiencing homelessness in Vancouver's Downtown
+              Eastside.
             </p>
             <div className="mt-6 flex gap-3">
               {[
@@ -66,7 +64,6 @@ export default function SiteFooter() {
               >
                 {socials.email}
               </a>
-              <p className="mt-3 text-muted-foreground">Vancouver, BC · Downtown Eastside</p>
             </address>
           </div>
         </div>
@@ -84,14 +81,6 @@ export default function SiteFooter() {
             </Link>
           </div>
         </div>
-      </div>
-
-      {/* Oversized wordmark, cropped by the bottom edge */}
-      <div
-        aria-hidden
-        className="pointer-events-none -mb-[0.2em] select-none whitespace-nowrap text-center font-marker text-[13.6vw] leading-[0.8] text-foreground/[0.06]"
-      >
-        #SAVEHASTINGS
       </div>
     </footer>
   )

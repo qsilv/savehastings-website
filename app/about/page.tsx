@@ -1,15 +1,12 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Award, Calendar, Heart, Home, Users } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { TeamMemberCard } from "@/components/team-member-card"
 import PageHero from "@/components/page-hero"
 import { SectionHeading } from "@/components/section-heading"
-import { SpotlightCard } from "@/components/fx/spotlight-card"
-import { Reveal } from "@/components/fx/reveal"
-import { CountUp } from "@/components/fx/count-up"
 import { cofounders, executives, impactStats } from "@/lib/site-data"
 import { createMetadata } from "@/lib/metadata"
 
@@ -22,48 +19,41 @@ export const metadata = createMetadata({
 })
 
 const values = [
+  { title: "Compassion", text: "We treat each person we meet with empathy and respect for their dignity." },
   {
-    icon: Heart,
-    title: "Compassion",
-    text: "We approach our work with empathy and understanding, recognizing the dignity and worth of every individual.",
-  },
-  {
-    icon: Users,
     title: "Community",
-    text: "We believe in the power of community to create positive change and foster a sense of belonging for all.",
+    text: "We believe people working together can change a neighbourhood and give each other a place to belong.",
   },
-  {
-    icon: Home,
-    title: "Action",
-    text: "We are committed to taking meaningful action to address the root causes of homelessness and poverty.",
-  },
+  { title: "Action", text: "We act on the causes of homelessness and poverty." },
 ]
 
 const joinWays = [
-  { icon: Users, title: "Volunteer", text: "Join our team of dedicated volunteers." },
-  { icon: Award, title: "Become a Sponsor", text: "Support our work through corporate sponsorship." },
-  { icon: Calendar, title: "Attend an Event", text: "Participate in our community events and fundraisers." },
+  { title: "Volunteer", text: "Join our volunteer team." },
+  { title: "Become a sponsor", text: "Support our work as a business." },
+  { title: "Attend an event", text: "Come to a community event or fundraiser." },
 ]
+
+const tabClass =
+  "h-full rounded-full px-5 text-sm font-semibold data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
 
 export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About us"
         title={
           <>
-            About <span className="neon font-marker font-normal">#SAVEHASTINGS</span>
+            About <span className="wordmark">#SAVEHASTINGS</span>
           </>
         }
       >
-        Learn about our mission, our team, and the impact we're making in Vancouver's Downtown Eastside.
+        Who we are and what we do in Vancouver's Downtown Eastside.
       </PageHero>
 
       {/* Story */}
-      <section className="pb-24 md:pb-32">
+      <section className="pb-20 md:pb-28">
         <div className="container grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
-          <Reveal className="relative mx-auto w-full max-w-xl pb-10 pr-8 sm:pr-16">
-            <div className="relative aspect-[4/3] -rotate-2 overflow-hidden rounded-3xl border shadow-photo">
+          <div className="relative mx-auto w-full max-w-xl pb-10 pr-8 sm:pr-16">
+            <div className="relative aspect-[4/3] -rotate-2 overflow-hidden rounded-3xl shadow-photo">
               <Image
                 src="/tempabout1.jpeg"
                 alt="Volunteers working in the community"
@@ -85,94 +75,73 @@ export default function AboutPage() {
                 />
               </div>
             </div>
-          </Reveal>
+          </div>
 
           <div>
-            <SectionHeading eyebrow="Our Story" title={<>Started by students. <span className="text-primary">Still on the street.</span></>} />
-            <Reveal delay={0.1} className="mt-7 space-y-5 text-lg leading-relaxed text-muted-foreground">
+            <SectionHeading title="Our story" />
+            <div className="mt-6 max-w-[65ch] space-y-5 text-lg leading-relaxed text-muted-foreground">
               <p>
-                #SAVEHASTINGS was founded in 2023 by a group of students who saw a growing crisis in their community and
-                felt compelled to act. What began as a small effort to support those experiencing homelessness in
-                Vancouver’s Downtown Eastside (DTES) quickly grew into a youth-led movement dedicated to creating
-                meaningful change.
+                A group of students founded #SAVEHASTINGS in 2023 after watching a crisis grow in their own community.
+                They started small, supporting people experiencing homelessness in Vancouver's Downtown Eastside
+                (DTES), and the effort grew into a youth-led movement.
               </p>
               <p>
-                Today, we are a diverse team of volunteers united by the belief that everyone deserves access to safe
-                housing and essential resources. Through bi-weekly events, we provide much-needed supplies while
-                fostering connection and compassion on East Hastings Street. But our mission goes beyond immediate
-                relief—we are committed to building a future where homelessness is not a reality. By working together,
-                we can create lasting change and bring hope to the heart of the DTES.
+                Today our volunteers come from many backgrounds and share one belief: everyone deserves safe housing
+                and essential resources. We hold events every two weeks on East Hastings Street, where we hand out
+                supplies and spend time with the people we meet. We want a future without homelessness, and we work
+                toward it together.
               </p>
-            </Reveal>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="paper py-24 md:py-32">
+      <section className="paper py-20 md:py-28">
         <div className="container">
-          <SectionHeading eyebrow="What drives us" title="Our Mission & Values" align="center" />
-          <div className="mt-14 grid gap-4 md:grid-cols-3">
-            {values.map(({ icon: Icon, title, text }, i) => (
-              <Reveal key={title} delay={0.08 * i}>
-                <SpotlightCard className="h-full">
-                  <div className="flex h-full flex-col p-8">
-                    <div className="flex items-center justify-between">
-                      <div className="flex size-14 items-center justify-center rounded-2xl bg-primary/15 text-primary">
-                        <Icon className="size-7" />
-                      </div>
-                      <span aria-hidden className="text-outline font-display text-6xl font-extrabold">
-                        0{i + 1}
-                      </span>
-                    </div>
-                    <h3 className="mt-10 text-3xl font-extrabold tracking-tight">{title}</h3>
-                    <p className="mt-3 leading-relaxed text-muted-foreground">{text}</p>
-                  </div>
-                </SpotlightCard>
-              </Reveal>
+          <SectionHeading title="Our mission and values" />
+          <dl className="mt-10 grid gap-x-10 md:grid-cols-3">
+            {values.map((v) => (
+              <div key={v.title} className="border-t border-foreground/20 py-6">
+                <dt className="font-display text-3xl font-extrabold tracking-tight">{v.title}</dt>
+                <dd className="mt-3 leading-relaxed text-muted-foreground">{v.text}</dd>
+              </div>
             ))}
-          </div>
+          </dl>
         </div>
       </section>
 
       {/* Impact */}
-      <section className="py-24 md:py-32">
+      <section className="py-20 md:py-28">
         <div className="container">
-          <SectionHeading eyebrow="By the numbers" title="Our Impact" />
-          <dl className="mt-14 grid gap-px overflow-hidden rounded-3xl border bg-border sm:grid-cols-2 lg:grid-cols-4">
-            {impactStats.map((stat, i) => (
-              <Reveal key={stat.title} delay={0.06 * i} className="bg-card p-7 md:p-8">
-                <dt className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">{stat.title}</dt>
+          <SectionHeading title="Our impact" />
+          <dl className="mt-10 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-4">
+            {impactStats.map((stat) => (
+              <div key={stat.title} className="border-t py-6">
+                <dt className="font-semibold">{stat.title}</dt>
                 <dd>
-                  <CountUp
-                    value={stat.number}
-                    className="mt-3 block font-display text-6xl font-extrabold tracking-tight text-primary"
-                  />
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{stat.description}</p>
+                  <span className="mt-2 block font-display text-5xl font-extrabold tracking-tight text-primary">
+                    {stat.number}
+                  </span>
+                  <span className="mt-3 block text-sm leading-relaxed text-muted-foreground">{stat.description}</span>
                 </dd>
-              </Reveal>
+              </div>
             ))}
           </dl>
         </div>
       </section>
 
       {/* Team */}
-      <section className="pb-24 md:pb-32">
+      <section className="pb-20 md:pb-28">
         <div className="container">
           <Tabs defaultValue="cofounders" className="w-full">
             <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-              <SectionHeading eyebrow="The people" title="Our Team" />
+              <SectionHeading title="Our team" />
               <TabsList className="h-12 self-start rounded-full border bg-card p-1 sm:self-auto">
-                <TabsTrigger
-                  value="cofounders"
-                  className="h-full rounded-full px-5 text-sm font-semibold data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-                >
+                <TabsTrigger value="cofounders" className={tabClass}>
                   Directors
                 </TabsTrigger>
-                <TabsTrigger
-                  value="executives"
-                  className="h-full rounded-full px-5 text-sm font-semibold data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-                >
+                <TabsTrigger value="executives" className={tabClass}>
                   Executives
                 </TabsTrigger>
               </TabsList>
@@ -199,52 +168,43 @@ export default function AboutPage() {
 
       {/* Join */}
       <section className="px-3 pb-6 md:px-6">
-        <Reveal>
-          <div className="paper overflow-hidden rounded-[2rem] md:rounded-[3rem]">
-            <div className="grid items-stretch lg:grid-cols-2">
-              <div className="p-8 md:p-14">
-                <p className="eyebrow">Get involved</p>
-                <h2 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Join Our Mission</h2>
-                <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                  There are many ways to get involved with #SAVEHASTINGS and make a difference in the lives of those
-                  experiencing homelessness in Vancouver's Downtown Eastside.
-                </p>
-                <ul className="mt-8 space-y-5">
-                  {joinWays.map(({ icon: Icon, title, text }) => (
-                    <li key={title} className="flex gap-4">
-                      <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-primary">
-                        <Icon className="size-5" />
-                      </div>
-                      <div>
-                        <h3 className="font-sans text-lg font-bold">{title}</h3>
-                        <p className="text-muted-foreground">{text}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-10 flex flex-wrap gap-3">
-                  <Button asChild size="lg">
-                    <Link href="/volunteer">
-                      Volunteer Now <ArrowRight />
-                    </Link>
-                  </Button>
-                  <Button asChild size="lg" variant="outline">
-                    <Link href="/sponsors#become-sponsor">Become a Sponsor</Link>
-                  </Button>
-                </div>
-              </div>
-              <div className="relative min-h-[20rem]">
-                <Image
-                  src="/about2.jpeg"
-                  alt="Join our mission"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
+        <div className="paper overflow-hidden rounded-3xl">
+          <div className="grid items-stretch lg:grid-cols-2">
+            <div className="p-8 md:p-14">
+              <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Join our mission</h2>
+              <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+                You can help people experiencing homelessness in Vancouver's Downtown Eastside in a few ways.
+              </p>
+              <dl className="mt-8 border-t border-foreground/20">
+                {joinWays.map((way) => (
+                  <div key={way.title} className="border-b border-foreground/20 py-4">
+                    <dt className="text-lg font-bold">{way.title}</dt>
+                    <dd className="text-muted-foreground">{way.text}</dd>
+                  </div>
+                ))}
+              </dl>
+              <div className="mt-10 flex flex-wrap gap-3">
+                <Button asChild size="lg">
+                  <Link href="/volunteer">
+                    Volunteer Now <ArrowRight />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <Link href="/sponsors#become-sponsor">Become a Sponsor</Link>
+                </Button>
               </div>
             </div>
+            <div className="relative min-h-[20rem]">
+              <Image
+                src="/about2.jpeg"
+                alt="Join our mission"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
           </div>
-        </Reveal>
+        </div>
       </section>
     </>
   )

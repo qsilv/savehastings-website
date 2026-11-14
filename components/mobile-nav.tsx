@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import DonationButton from "@/components/donation-button"
 
-/** Full-height mobile menu with oversized links. Closes itself on navigation. */
+/** Full-height mobile menu. Closes itself on navigation. */
 export default function MobileNav() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
@@ -26,11 +26,11 @@ export default function MobileNav() {
       </SheetTrigger>
 
       <SheetContent side="right" className="flex w-full flex-col border-l-0 bg-background p-6 sm:max-w-md">
-        <SheetTitle className="font-marker text-3xl font-normal text-primary">#SAVEHASTINGS</SheetTitle>
+        <SheetTitle className="wordmark text-3xl">#SAVEHASTINGS</SheetTitle>
         <SheetDescription className="sr-only">Site navigation</SheetDescription>
 
         <nav className="mt-8 flex flex-col" aria-label="Mobile">
-          {navLinks.map((link, i) => {
+          {navLinks.map((link) => {
             const active = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href)
             return (
               <Link
@@ -42,12 +42,7 @@ export default function MobileNav() {
                   active ? "text-primary" : "text-foreground hover:text-primary",
                 )}
               >
-                <span>
-                  <span className="mr-3 align-middle font-sans text-xs font-medium text-muted-foreground">
-                    0{i + 1}
-                  </span>
-                  {link.label}
-                </span>
+                {link.label}
                 <ArrowUpRight className="size-6 opacity-40 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
               </Link>
             )

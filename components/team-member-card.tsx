@@ -8,7 +8,7 @@ interface TeamMemberCardProps {
 }
 
 const socialClass =
-  "flex size-10 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur transition-colors hover:bg-primary hover:text-primary-foreground"
+  "flex size-10 items-center justify-center rounded-full bg-black/60 text-white transition-colors hover:bg-primary hover:text-primary-foreground"
 
 /** Portrait card: name and role sit on the photo, socials on the corner. */
 export function TeamMemberCard({ member, size = "large" }: TeamMemberCardProps) {

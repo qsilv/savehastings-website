@@ -87,7 +87,7 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
                             Donate to <span className={`${goodDogFont.className} text-3xl font-normal text-primary`}>#SAVEHASTINGS</span>
                         </DialogTitle>
                         <DialogDescription className="text-base">
-                            Your donation helps support the homeless population in Vancouver's Downtown Eastside.
+                            Your donation supports people experiencing homelessness in Vancouver's Downtown Eastside.
                         </DialogDescription>
                     </DialogHeader>
 
@@ -102,7 +102,7 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
                                         aria-pressed={selected}
                                         onClick={() => handleAmountSelect(amt)}
                                         className={`rounded-2xl border py-5 font-display text-3xl font-extrabold transition-all active:scale-95 ${selected
-                                            ? "border-primary bg-primary text-primary-foreground shadow-glow"
+                                            ? "border-primary bg-primary text-primary-foreground"
                                             : "bg-foreground/[0.04] hover:border-primary hover:text-primary"
                                             }`}
                                     >

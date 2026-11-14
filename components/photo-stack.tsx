@@ -71,7 +71,9 @@ export default function PhotoStack({ photos }: { photos: StackPhoto[] }) {
                   priority={i === 0}
                 />
               </div>
-              <figcaption className="flex h-12 items-center justify-center font-marker text-2xl text-neutral-800 sm:h-14 sm:text-3xl">
+              <figcaption
+                className={`${depth === 0 ? "" : "invisible"} flex h-12 items-center justify-center font-marker text-2xl text-neutral-800 sm:h-14 sm:text-3xl`}
+              >
                 {photo.caption}
               </figcaption>
             </motion.figure>

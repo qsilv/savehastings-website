@@ -16,44 +16,42 @@ export const sponsors = [
     id: 1,
     name: "Islamic Relief Canada",
     logo: "/partners/islamicrelief.webp",
-    description: "Supporting humanitarian aid and development projects to help those in need.",
+    description: "Humanitarian aid and development projects for people in need.",
     website: "https://islamicreliefcanada.org/",
   },
   {
     id: 2,
     name: "IDRF (International Development and Relief Foundation)",
     logo: "/partners/idrf.webp",
-    description: "Providing effective humanitarian aid and sustainable development programs.",
+    description: "Humanitarian aid and development programs.",
     website: "https://idrf.org/",
   },
   {
     id: 3,
     name: "House of Chicken",
     logo: "/partners/house.jpg",
-    description:
-      "Specializes in flavorful chicken dishes, including original chicken biryani, chicken karahi, chicken burgers, spicy wings, and wraps.",
+    description: "Chicken biryani, chicken karahi, burgers, spicy wings and wraps.",
     website: "https://www.facebook.com/HouseOfChickenCanada/",
   },
   {
     id: 4,
     name: "Paragon Roofing",
     logo: "/partners/paragon.webp",
-    description:
-      "Roofing in BC, offering a large selection of roof repair, inspection, removal, reroof and roofing install services.",
+    description: "Roof repair, inspection, removal, reroofing and installation in BC.",
     website: "https://www.paragonroofingbc.ca/",
   },
   {
     id: 5,
     name: "Sabzi Mandi",
     logo: "/partners/sabzi.png",
-    description: "Family-owned and operated premier grocery store chain in Canada.",
+    description: "Family-owned grocery store chain in Canada.",
     website: "https://sabzimandicanada.com/",
   },
   {
     id: 6,
     name: "Chicken World",
     logo: "/partners/chickenworld.webp",
-    description: "Specialty fried chicken and burgers chain.",
+    description: "Fried chicken and burger chain.",
     website: "https://www.chickenworldcanada.com/",
   },
   {
@@ -67,7 +65,7 @@ export const sponsors = [
     id: 8,
     name: "Save On Foods",
     logo: "/partners/saveonfoods.png",
-    description: "Carrying more than 2,500 locally-made products from more than 2,000 local growers and producers.",
+    description: "Grocery chain carrying more than 2,500 locally made products from more than 2,000 local growers and producers.",
     website: "https://www.saveonfoods.com/",
   },
 ]
@@ -127,23 +125,23 @@ export const executives: TeamMember[] = [
 export const impactStats = [
   {
     number: "350+",
-    title: "Meals Monthly",
-    description: "Nutritious meals prepared and served by our volunteers through mobile food services.",
+    title: "Meals monthly",
+    description: "Meals our volunteers prepare and serve through mobile food services.",
   },
   {
     number: "100+",
-    title: "Active Volunteers",
-    description: "Dedicated community members who donate their time and skills to support our mission.",
+    title: "Active volunteers",
+    description: "Community members who give their time and skills.",
   },
   {
-    number: "8000+",
-    title: "People Supported",
-    description: "Individuals who have received assistance through our various programs and services.",
+    number: "8,000+",
+    title: "People supported",
+    description: "People who have received help through our programs.",
   },
   {
     number: "7+",
-    title: "Community Partners",
-    description: "Organizations and businesses that collaborate with us to maximize our impact.",
+    title: "Community partners",
+    description: "Organizations and businesses that work with us.",
   },
 ]
 
@@ -155,16 +153,16 @@ export interface Photo {
   aspect: string
 }
 
-// Every photo from the streets, in one place.
+// Outreach photos shown in the home page gallery.
 export const photos: Photo[] = [
-  { src: "/hero/hero2.jpg", alt: "Volunteers distributing meals at night", caption: "Dinner line, East Hastings", aspect: "aspect-[4/3]" },
-  { src: "/about1.png", alt: "Volunteers gathering before an outreach night", caption: "Before the walk", aspect: "aspect-[4/5]" },
-  { src: "/hero/hero3.jpeg", alt: "A volunteer and a community member sharing a meal and a smile", caption: "Smiles over pizza", aspect: "aspect-[4/3]" },
-  { src: "/impact.png", alt: "Volunteers handing out pizza on the street", caption: "Hot slices, handed out", aspect: "aspect-[16/9]" },
+  { src: "/hero/hero2.jpg", alt: "Volunteers distributing meals at night", caption: "Serving dinner on East Hastings", aspect: "aspect-[4/3]" },
+  { src: "/about1.png", alt: "Volunteers gathering before an outreach night", caption: "Volunteers before an outreach night", aspect: "aspect-[4/5]" },
+  { src: "/hero/hero3.jpeg", alt: "A volunteer and a community member sharing a meal and a smile", caption: "Sharing pizza", aspect: "aspect-[4/3]" },
+  { src: "/impact.png", alt: "Volunteers handing out pizza on the street", caption: "Handing out pizza", aspect: "aspect-[16/9]" },
   { src: "/about2.jpeg", alt: "A community member giving a thumbs up with a meal", caption: "Thumbs up", aspect: "aspect-square" },
-  { src: "/hero/hero4.jpeg", alt: "Volunteers sorting warm clothing", caption: "Sorting warm layers", aspect: "aspect-[4/3]" },
-  { src: "/hero/hero1.webp", alt: "Volunteers setting up at a community event", caption: "Set-up crew", aspect: "aspect-[16/9]" },
-  { src: "/sponsor1.jpeg", alt: "Partner volunteers serving food at night", caption: "Partners on the ground", aspect: "aspect-[4/3]" },
-  { src: "/tempabout1.jpeg", alt: "The volunteer team together after an outreach night", caption: "The whole crew", aspect: "aspect-[4/3]" },
-  { src: "/volunteer1.jpeg", alt: "Three volunteers in #SAVEHASTINGS shirts", caption: "Heroic hearts", aspect: "aspect-square" },
+  { src: "/hero/hero4.jpeg", alt: "Volunteers sorting warm clothing", caption: "Sorting clothes", aspect: "aspect-[4/3]" },
+  { src: "/hero/hero1.webp", alt: "Volunteers setting up at a community event", caption: "Setting up", aspect: "aspect-[16/9]" },
+  { src: "/sponsor1.jpeg", alt: "Partner volunteers serving food at night", caption: "IDRF volunteers serving food", aspect: "aspect-[4/3]" },
+  { src: "/tempabout1.jpeg", alt: "The volunteer team together after an outreach night", caption: "The team after an outreach night", aspect: "aspect-[4/3]" },
+  { src: "/volunteer1.jpeg", alt: "Three volunteers in #SAVEHASTINGS shirts", caption: "Volunteers in our shirts", aspect: "aspect-square" },
 ]

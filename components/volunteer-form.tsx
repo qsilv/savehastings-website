@@ -85,13 +85,13 @@ export default function VolunteerForm() {
     return (
       <div className="rounded-3xl border border-primary/40 bg-card p-10 text-center">
         <div className="flex flex-col items-center justify-center space-y-4">
-          <div className="rounded-full bg-primary/15 p-4 shadow-glow">
+          <div className="rounded-full bg-primary/15 p-4">
             <CheckCircle2 className="h-10 w-10 text-primary" />
           </div>
-          <h3 className="text-3xl font-extrabold tracking-tight">Thank You for Registering!</h3>
+          <h3 className="text-3xl font-extrabold tracking-tight">Thank you for registering</h3>
           <p className="max-w-md text-muted-foreground">
-            We've received your volunteer application. A member of our team will contact you within 2-3 business days to
-            discuss next steps.
+            We've received your application. A team member will contact you within 2-3 business days about next
+            steps.
           </p>
           <Button onClick={() => {
             setSubmitted(false)
@@ -182,7 +182,7 @@ export default function VolunteerForm() {
           <Textarea
             id="skills"
             name="entry.1353334588"
-            placeholder="Please share any relevant skills, experience, or certifications you have."
+            placeholder="Relevant skills, experience or certifications."
             className="min-h-[110px]"
             required
           />
@@ -193,7 +193,7 @@ export default function VolunteerForm() {
           <Textarea
             id="why-volunteer"
             name="entry.192662415"
-            placeholder="Tell us why you're interested in volunteering with us."
+            placeholder="Tell us why you'd like to volunteer."
             className="min-h-[110px]"
             required
           />

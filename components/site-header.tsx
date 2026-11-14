@@ -11,7 +11,7 @@ import { navLinks } from "@/lib/site-data"
 import DonationButton from "@/components/donation-button"
 import MobileNav from "@/components/mobile-nav"
 
-/** Floating glass navigation pill that tightens once the page scrolls. */
+/** Navigation pill that gains a solid background once the page scrolls. */
 export default function SiteHeader() {
   const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
@@ -29,7 +29,7 @@ export default function SiteHeader() {
         className={cn(
           "pointer-events-auto mx-auto flex h-14 max-w-5xl items-center gap-2 rounded-full border pl-4 pr-2 transition-all duration-300",
           scrolled
-            ? "border-white/10 bg-background/75 shadow-[0_10px_40px_-12px_rgb(0_0_0/0.8)] backdrop-blur-xl"
+            ? "border-border bg-background shadow-[0_12px_30px_-16px_rgb(0_0_0/0.9)]"
             : "border-transparent bg-transparent",
         )}
       >
