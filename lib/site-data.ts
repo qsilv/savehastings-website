@@ -121,7 +121,7 @@ export const impactStats = [
     description: "Meals our volunteers prepare and serve through mobile food services.",
   },
   {
-    number: "100+",
+    number: "200+",
     title: "Active volunteers",
     description: "Community members who give their time and skills.",
   },

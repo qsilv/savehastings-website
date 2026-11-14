@@ -28,7 +28,6 @@ Outreach nights on East Hastings Street, mostly after dark. Volunteers wear blac
 - Donations through Stripe embedded checkout.
 - Pages: Home, About, Volunteer, Sponsors, Privacy, Terms. An Events page exists but is not linked.
 - Next.js app with Tailwind and shadcn/ui components.
-- Published volunteer counts disagree (100+ and 200+); not yet resolved.
 
 ## Brand Commitments
 
@@ -44,7 +43,7 @@ Confirmed by the owner:
 - Ten outreach photos in `public/` and `public/hero/`.
 - Team portraits in `public/team/`.
 - Eight partner logos in `public/partners/`.
-- Stats: 350+ meals monthly, 8,000+ people supported, 7+ community partners.
+- Stats: 350+ meals monthly, 200+ active volunteers, 8,000+ people supported, 7+ community partners.
 - No testimonials, press quotes or annual reports. Do not invent any.
 
 ## Product Principles
